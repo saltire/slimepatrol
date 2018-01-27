@@ -18,7 +18,6 @@ keyJumpHeld		= gamepad_button_check(argument5,argument4);
 // get aim direction from right stick
 gph = gamepad_axis_value(playerNumber, gp_axisrh);
 gpv = gamepad_axis_value(playerNumber, gp_axisrv);
-aimDirection = point_direction(0, 0, gph, gpv);
 aimActive = !in_deadzone(gph, deadzone) or !in_deadzone(gpv, deadzone);
 
 //check for analog stick inputs
@@ -29,13 +28,17 @@ if gamepad_axis_value(argument5, gp_axislv) > deadzone { keyDown = true; }
 
 // flip character sprite
 if (aimActive) {
+	aimDirection = point_direction(0, 0, gph, gpv);
 	image_xscale = sign(lengthdir_x(1, aimDirection));
 }
-else if (keyLeft) {
-	image_xscale = -1;
-}
-else if (keyRight) {
-	image_xscale = 1;
+else {
+	if (keyLeft) {
+		image_xscale = -1;
+	}
+	else if (keyRight) {
+		image_xscale = 1;
+	}
+	aimDirection = image_xscale > 0 ? 0 : 180;
 }
 
 #endregion

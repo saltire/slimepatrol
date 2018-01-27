@@ -1,14 +1,18 @@
-if (group == noone) {
-	physics_particle_group_begin(flags, 0, x + distance * -facing, y, 0, spd * facing, 0, 0, c_white, 1, 1, cat);
-	physics_particle_group_circle(30);
-	group = physics_particle_group_end();
-	//show_debug_message("created group " + string(group));
-}
-	
 frames -= 1;
 
-if (group != noone and frames <= 0) {
-	//show_debug_message("destroying group " + string(group));
-	physics_particle_group_delete(group);
-	instance_destroy();
+if (group == noone) {
+	physics_particle_group_begin(flags, 0, 
+		x + lengthdir_x(groupDistance, direction), y + lengthdir_y(groupDistance, direction), 
+		0, -lengthdir_x(spd, direction), -lengthdir_y(spd, direction), 0, c_white, 1, 1, cat);
+	physics_particle_group_circle(groupRadius);
+	group = physics_particle_group_end();
+}
+else {
+	physics_particle_delete_region_circle(
+	x + lengthdir_x(deleteDistance, direction), y + lengthdir_y(deleteDistance, direction), deleteRadius);
+
+	if (frames <= 0) {
+		physics_particle_group_delete(group);
+		instance_destroy();
+	}
 }
