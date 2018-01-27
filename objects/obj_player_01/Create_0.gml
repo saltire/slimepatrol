@@ -45,4 +45,6 @@ dead = false;
 //alpha = 0;
 
 
-vacuum = 0;
+touchingSlime = false; // are we touching slime?
+
+vacuum = 0; // id of vacuum cleaner instance

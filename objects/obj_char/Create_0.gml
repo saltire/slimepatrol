@@ -1,1 +1,0 @@
-flags = phy_particle_data_flag_position;
