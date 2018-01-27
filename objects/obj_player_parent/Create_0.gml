@@ -48,4 +48,10 @@ dead = false;
 touchingSlime = false; // are we touching slime?
 slimeSpeedRatio = 100;
 
+gunCooldown = 0;
+gunCooldownRate = 15;
+bulletCount = 8;
+spreadAngle = 4;
+bulletSpeed = 10;
+
 vacuum = 0; // id of vacuum cleaner instance

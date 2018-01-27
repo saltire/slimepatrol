@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "7c70b281-a387-4730-b688-107bb0ca5204",
+            "Value": {
+                "id": "fb76570b-41b6-440c-9ffa-bce15523bfce",
+                "resourcePath": "scripts\\in_deadzone\\in_deadzone.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "81aa7449-68be-4748-b3e7-28585b36d50a",
             "Value": {
                 "id": "e2edac5c-575b-4f0b-81f7-ef76403bbd65",
@@ -191,11 +199,11 @@
             }
         },
         {
-            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Key": "8805c75c-8c14-4b45-bf71-4fdc5532ca26",
             "Value": {
-                "id": "8544a320-4ae9-4263-9b5f-4abcfae57570",
-                "resourcePath": "options\\ios\\options_ios.yy",
-                "resourceType": "GMiOSOptions"
+                "id": "6df88ada-d0b3-4c56-8639-71c5520c8b4a",
+                "resourcePath": "sprites\\spr_bullet\\spr_bullet.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -244,14 +252,6 @@
                 "id": "4acedb9f-8943-408c-8ea0-e459083bc176",
                 "resourcePath": "sprites\\sp_player_01\\sp_player_01.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
-            "Value": {
-                "id": "4a1139c5-467f-4e0c-9e0a-6063b14c724f",
-                "resourcePath": "options\\linux\\options_linux.yy",
-                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -319,19 +319,19 @@
             }
         },
         {
+            "Key": "df934f8f-56d8-4729-9e0f-88a79c58282a",
+            "Value": {
+                "id": "a2fc7688-dd81-49a0-bf81-11d830175267",
+                "resourcePath": "objects\\obj_bullet\\obj_bullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e39e5972-bb34-46d4-aa75-b9e2d6ef4576",
             "Value": {
                 "id": "ec7055d6-1a8f-45c9-b879-58bc83ac568d",
                 "resourcePath": "objects\\obj_player_01\\obj_player_01.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
-            "Value": {
-                "id": "bc42160c-00e7-4e52-84ce-bbcc7aa2081c",
-                "resourcePath": "options\\android\\options_android.yy",
-                "resourceType": "GMAndroidOptions"
             }
         },
         {
@@ -367,14 +367,6 @@
             }
         },
         {
-            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
-            "Value": {
-                "id": "61986265-dd44-439a-abcb-de09cf2594d0",
-                "resourcePath": "options\\mac\\options_mac.yy",
-                "resourceType": "GMMacOptions"
-            }
-        },
-        {
             "Key": "f41e2159-e0d0-46d3-8f03-013470d8c47d",
             "Value": {
                 "id": "666ceae3-2b3c-4687-96bc-2fc364d55511",
@@ -384,7 +376,8 @@
         }
     ],
     "script_order": [
-        "d8a1c905-1214-4af0-aa40-fcb62bc24c03"
+        "d8a1c905-1214-4af0-aa40-fcb62bc24c03",
+        "7c70b281-a387-4730-b688-107bb0ca5204"
     ],
     "tutorial": ""
 }

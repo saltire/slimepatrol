@@ -77,10 +77,25 @@ if (canMove) {
 //}
 
 
+//firing = gamepad_button_check(playerNumber, gp_shoulderrb;
 
+// fire shotgun
+if (gunCooldown > 0) {
+	gunCooldown--;
+}
+if (aimActive and gunCooldown <= 0) {
+	gunCooldown += gunCooldownRate;
+	
+	for (b = 0; b < bulletCount; b++) {
+		with instance_create_layer(x + image_xscale * 20, y - sprite_height / 2, layer, obj_bullet) {
+			direction = other.aimDirection + (other.b - (other.bulletCount - 1) / 2) * other.spreadAngle;
+			speed = other.bulletSpeed;
+		}
+	}
+}
 
 // spawn a vacuum cleaner instance
-if (keyboard_check(ord("Z")) and (!vacuum or !instance_exists(vacuum))) {
+if (gamepad_button_check(playerNumber, gp_face3) and (!vacuum or !instance_exists(vacuum))) {
 	show_debug_message("creating vacuum");
 	vacuum = instance_create_layer(x, y - sprite_height / 2, "ParticleLayer", obj_vacuum);
 	vacuum.facing = -image_xscale;

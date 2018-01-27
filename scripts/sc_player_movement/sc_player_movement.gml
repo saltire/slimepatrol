@@ -15,11 +15,29 @@ keyDown			= gamepad_button_check(argument5,argument3);
 keyJumpPress	= gamepad_button_check_pressed(argument5,argument4);
 keyJumpHeld		= gamepad_button_check(argument5,argument4);
 
+// get aim direction from right stick
+gph = gamepad_axis_value(playerNumber, gp_axisrh);
+gpv = gamepad_axis_value(playerNumber, gp_axisrv);
+aimDirection = point_direction(0, 0, gph, gpv);
+aimActive = !in_deadzone(gph, deadzone) or !in_deadzone(gpv, deadzone);
+
 //check for analog stick inputs
 if gamepad_axis_value(argument5, gp_axislh) < -deadzone { keyLeft = true; }
 if gamepad_axis_value(argument5, gp_axislh) > deadzone { keyRight = true; }
 if gamepad_axis_value(argument5, gp_axislv) < -deadzone { keyUp = true; }
 if gamepad_axis_value(argument5, gp_axislv) > deadzone { keyDown = true; }
+
+// flip character sprite
+if (aimActive) {
+	image_xscale = sign(lengthdir_x(1, aimDirection));
+}
+else if (keyLeft) {
+	image_xscale = -1;
+}
+else if (keyRight) {
+	image_xscale = 1;
+}
+
 #endregion
 //------------------------------------------------------//
 //					HORIZONTAL MOVEMENT					//
@@ -27,7 +45,6 @@ if gamepad_axis_value(argument5, gp_axislv) > deadzone { keyDown = true; }
 #region
 //when attempting to move left and not on a ladder
 if (keyLeft) {
-    image_xscale = -1; //flip the object
     if (hspd > 0) { //walking to the right
         hspd = 0; //turn on a dime
     }
@@ -37,7 +54,6 @@ if (keyLeft) {
 }
 //when attempting to move right and not on a ladder
 if (keyRight) {
-    image_xscale = 1; //flip the object
     if (hspd < 0) { //walking to the left
         hspd = 0; //turn on a dime
     }
