@@ -11,7 +11,7 @@ grav = 0.5;				//jumpSpeed decreased by this value each step
 terminalVelocity = jumpSpeed*2; //maximum falling speed
 climbSpeed = 2;			//pixels moved when climbing ladders
 onPlatformSpeed = moveSpeed;
-jumpGraceFrames = game_get_speed(gamespeed_fps)/10;	//frames you can jump after walking off ledge
+jumpGraceFrames = game_get_speed(gamespeed_fps)/15;	//frames you can jump after walking off ledge
 
 //states
 onGround = false;       //check if on the ground

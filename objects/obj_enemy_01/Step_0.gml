@@ -36,6 +36,32 @@ image_xscale = facing;
 // vertical movement
 if (!onGround) vspd += grav;
 
+// jumping
+if ((instance_exists(obj_player_01) && obj_player_01.y < y)
+|| instance_exists(obj_player_02) && obj_player_02.y < y) {
+
+	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height, obj_impasse);
+	var ceilingMeeting = place_meeting(x, y - sprite_height, obj_impasse);
+	var wallMeeting = place_meeting(x + (hspd*20), y, obj_impasse);
+	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting;
+
+	if (onGround && jumpViable) {
+		if (!place_meeting(x,y-jumpSpeed,obj_impasse)) {
+		    vspd = -jumpSpeed;
+		} else if (place_meeting(x,y-jumpSpeed,obj_impasse)) {
+			for (var i = 0; i < jumpSpeed; i++) {
+				if (!place_meeting(x,y-i,obj_impasse)) {
+					//loop again
+				}else{
+					vspd = -i;
+					break;
+				}
+			}
+		}
+	}
+	
+}
+
 //maximum falling speed
 if (vspd > terminalVelocity) vspd = terminalVelocity;
 
