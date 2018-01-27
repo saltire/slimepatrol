@@ -46,5 +46,6 @@ dead = false;
 
 
 touchingSlime = false; // are we touching slime?
+slimeSpeedRatio = 100;
 
 vacuum = 0; // id of vacuum cleaner instance

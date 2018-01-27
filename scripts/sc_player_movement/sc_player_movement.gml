@@ -1,4 +1,4 @@
-///@param left,right,up,down,jump,controllernumber
+///@param left,right,up,down,jump,controllernumber,dhs,dvs,slow
 
 //------------------------------------------------------//
 //						INITIALIZATION					//
@@ -55,6 +55,9 @@ if ((keyLeft && keyRight) || (!keyLeft && !keyRight)) {
         hspd += dec;
     }
 }
+
+hslow = min(abs(hspd), argument8) * sign(hspd);
+hspdTotal = hspd + argument6 - hslow;
 #endregion
 //------------------------------------------------------//
 //							JUMPING						//
@@ -83,6 +86,11 @@ if (canShortHop && !onGround) {
         vspd /= 2;
     }
 }
+//maximum falling speed
+if (vspd > terminalVelocity) vspd = terminalVelocity;
+
+vslow = min(abs(vspd), argument8) * sign(vspd);
+vspdTotal = vspd + argument7 - vslow;
 #endregion
 //------------------------------------------------------//
 //							LADDERS						//
@@ -168,25 +176,25 @@ if (canShortHop && !onGround) {
 //					HORIZONTAL COLLISIONS				//
 //------------------------------------------------------//
 #region
-if place_meeting(x+hspd,y,obj_impasse) {
+if place_meeting(x+hspdTotal,y,obj_impasse) {
     //use slopes going up
     yplus = 0;
-    while ( place_meeting(x+hspd,y-yplus,obj_impasse) && yplus <= abs(1*hspd) ) yplus += 1;
-    if (place_meeting(x+hspd,y-yplus,obj_impasse)) {
-        while (!place_meeting(x+sign(hspd),y,obj_impasse)) x += sign(hspd);
-        hspd = 0;
+    while ( place_meeting(x+hspdTotal,y-yplus,obj_impasse) && yplus <= abs(1*hspdTotal) ) yplus += 1;
+    if (place_meeting(x+hspdTotal,y-yplus,obj_impasse)) {
+        while (!place_meeting(x+sign(hspdTotal),y,obj_impasse)) x += sign(hspdTotal);
+        hspdTotal = 0;
     }else{
         y -= yplus;
     }
     //use this code instead to not use slope code
-    //while (!place_meeting(x+sign(hspd),y,obj_impasse)) x += sign(hspd);
-    //hspd = 0;
+    //while (!place_meeting(x+sign(hspdTotal),y,obj_impasse)) x += sign(hspdTotal);
+    //hspdTotal = 0;
 }
-if (!place_meeting(x+hspd,y+1,obj_impasse)) {
+if (!place_meeting(x+hspdTotal,y+1,obj_impasse)) {
     //use slopes going down
     yminus = 1;
-    while ( !place_meeting(x+hspd,y+yminus,obj_impasse) && yminus <= abs(1*hspd) ) yminus += 1;
-    if (!place_meeting(x+hspd,y+yminus,obj_impasse)) {
+    while ( !place_meeting(x+hspdTotal,y+yminus,obj_impasse) && yminus <= abs(1*hspdTotal) ) yminus += 1;
+    if (!place_meeting(x+hspdTotal,y+yminus,obj_impasse)) {
         //gravity
     }else{
         y += yminus;
@@ -194,37 +202,35 @@ if (!place_meeting(x+hspd,y+1,obj_impasse)) {
 }
 
 //x movement
-x += hspd;
+x += hspdTotal;
 
 //floor the x coordinate
-//if (onGround && !vspd) x = floor(x);
+//if (onGround && !vspdTotal) x = floor(x);
 #endregion
 //------------------------------------------------------//
 //					VERTICAL COLLISIONS					//
 //------------------------------------------------------//
 #region
 //passable block vert collision
-//if (vspd >= 0 && place_meeting(x,y+abs(vspd),obj_passable) && !place_meeting(x,y,obj_passable)) {
+//if (vspdTotal >= 0 && place_meeting(x,y+abs(vspdTotal),obj_passable) && !place_meeting(x,y,obj_passable)) {
 //	y = floor(y);
 //    while (!place_meeting(x,y+1,obj_passable)) y += 1;
-//    vspd = 0;
+//    vspdTotal = 0;
 //}
 
-if (place_meeting(x,y+vspd,obj_impasse)) {
-    while (!place_meeting(x,y+(grav*sign(vspd)),obj_impasse)) y += (grav*sign(vspd));
-    vspd = 0;
+if (place_meeting(x,y+vspdTotal,obj_impasse)) {
+    while (!place_meeting(x,y+(grav*sign(vspdTotal)),obj_impasse)) y += (grav*sign(vspdTotal));
+    vspdTotal = 0;
 }
-if (place_meeting(x,y+1,obj_impasse) && !onLadder && vspd >= 0 ) {
+if (place_meeting(x,y+1,obj_impasse) && !onLadder && vspdTotal >= 0 ) {
     onGround = true;
 }else{
 	onGround = false;
 }
 
-//maximum falling speed
-if (vspd > terminalVelocity) vspd = terminalVelocity;
 
 //y movement
-y += vspd;
+y += vspdTotal;
 
 //round y down to integer
 if (onGround) {
@@ -233,7 +239,7 @@ if (onGround) {
 
 //so sprites don't fidget near ground while in the air
 /*
-if vspd != 0 {
+if vspdTotal != 0 {
     onGround = false;
 }
 */
