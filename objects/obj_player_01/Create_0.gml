@@ -43,3 +43,6 @@ shootAnimMax = 12;		//how many steps attack frame is held
 
 dead = false;
 //alpha = 0;
+
+
+vacuum = 0;
