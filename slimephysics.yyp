@@ -146,7 +146,7 @@
             "Key": "36f83ac3-6189-467a-add4-5a0ab8dffa6f",
             "Value": {
                 "id": "8bc7b400-869d-4b29-950c-dd3ad91edc88",
-                "resourcePath": "objects\\obj_player_cv\\obj_player_cv.yy",
+                "resourcePath": "objects\\obj_player_01\\obj_player_01.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -332,6 +332,14 @@
                 "id": "0ccab9a0-5b9f-4729-90e6-b34ee1c3d6fc",
                 "resourcePath": "objects\\obj_particlewall\\obj_particlewall.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d7d51395-0e6e-4726-8c74-83e51ee43db7",
+            "Value": {
+                "id": "676003fd-cb83-4f0d-8c99-bce698a2b8ce",
+                "resourcePath": "rooms\\rm_move_test\\rm_move_test.yy",
+                "resourceType": "GMRoom"
             }
         },
         {

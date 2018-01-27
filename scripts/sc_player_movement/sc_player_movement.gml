@@ -1,4 +1,4 @@
-///@param left,right,up,down,jump
+///@param left,right,up,down,jump,controllernumber
 
 //------------------------------------------------------//
 //						INITIALIZATION					//
@@ -16,10 +16,10 @@ keyJumpPress	= gamepad_button_check_pressed(0,argument4) || keyboard_check_press
 keyJumpHeld		= gamepad_button_check(0,argument4)  || keyboard_check(ord("X"));
 
 //check for analog stick inputs
-if gamepad_axis_value(0, gp_axislh) < -deadzone { keyLeft = true; }
-if gamepad_axis_value(0, gp_axislh) > deadzone { keyRight = true; }
-if gamepad_axis_value(0, gp_axislv) < -deadzone { keyUp = true; }
-if gamepad_axis_value(0, gp_axislv) > deadzone { keyDown = true; }
+if gamepad_axis_value(argument5, gp_axislh) < -deadzone { keyLeft = true; }
+if gamepad_axis_value(argument5, gp_axislh) > deadzone { keyRight = true; }
+if gamepad_axis_value(argument5, gp_axislv) < -deadzone { keyUp = true; }
+if gamepad_axis_value(argument5, gp_axislv) > deadzone { keyDown = true; }
 #endregion
 //------------------------------------------------------//
 //					HORIZONTAL MOVEMENT					//

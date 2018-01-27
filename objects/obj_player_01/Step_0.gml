@@ -3,7 +3,7 @@
 //------------------------------------------------------//
 
 if (canMove) {
-	sc_player_movement(gp_padl,gp_padr,gp_padu,gp_padd,gp_face1);
+	sc_player_movement(gp_padl,gp_padr,gp_padu,gp_padd,gp_face1,0);
 }
 
 //------------------------------------------------------//
