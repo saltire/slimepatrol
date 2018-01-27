@@ -1,0 +1,60 @@
+// horizontal movement
+hspd = moveSpeed * facing;
+
+// -- HORIZONTAL COLLISIONS --//
+
+if place_meeting(x+hspd,y,obj_impasse) {
+    //use slopes going up
+    yplus = 0;
+    while ( place_meeting(x+hspd,y-yplus,obj_impasse) && yplus <= abs(1*hspd) ) yplus += 1;
+    if (place_meeting(x+hspd,y-yplus,obj_impasse)) {
+        while (!place_meeting(x+sign(hspd),y,obj_impasse)) x += sign(hspd);
+        hspd = 0;
+		facing *= -1;
+    }else{
+        y -= yplus;
+    }
+}
+
+if (!place_meeting(x+hspd,y+1,obj_impasse)) {
+    //use slopes going down
+    yminus = 1;
+    while ( !place_meeting(x+hspd,y+yminus,obj_impasse) && yminus <= abs(1*hspd) ) yminus += 1;
+    if (!place_meeting(x+hspd,y+yminus,obj_impasse)) {
+        //gravity
+    }else{
+        y += yminus;
+    }
+}
+
+//x movement
+x += hspd;
+
+// flip image to match movement direction (facing)
+image_xscale = facing;
+
+// vertical movement
+if (!onGround) vspd += grav;
+
+//maximum falling speed
+if (vspd > terminalVelocity) vspd = terminalVelocity;
+
+// -- VERTICAL COLLISIONS --//
+
+if (place_meeting(x,y+vspd,obj_impasse)) {
+    while (!place_meeting(x,y+(grav*sign(vspd)),obj_impasse)) y += (grav*sign(vspd));
+    vspd = 0;
+}
+if (place_meeting(x,y+1,obj_impasse) && vspd >= 0 ) {
+    onGround = true;
+}else{
+	onGround = false;
+}
+
+//y movement
+y += vspd;
+
+//round y down to integer
+if (onGround) {
+    y = floor(y);
+}

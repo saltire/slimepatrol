@@ -43,6 +43,9 @@ if (canMove) {
 	sc_player_movement(gp_padl,gp_padr,gp_padu,gp_padd,gp_face1,playerNumber, dhs, dvs, touching);
 }
 
+// wrap to other side of screen when leaving bounds
+//move_wrap(true, true, 0);
+
 //------------------------------------------------------//
 //						ANIMATION						//
 //------------------------------------------------------//
