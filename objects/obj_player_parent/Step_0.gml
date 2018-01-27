@@ -17,7 +17,7 @@ if count > 0 {
 		yy = buffer_read(buffer, buffer_f32);
 		xv = buffer_read(buffer, buffer_f32);
 		yv = buffer_read(buffer, buffer_f32);
-		if collision_point(xx, yy, obj_player_01, false, false) {
+		if collision_point(xx, yy, self, false, false) {
 			touching++;
 			dhs += xv;
 			dvs += yv;
@@ -40,7 +40,7 @@ if touching > 0 {
 
 
 if (canMove) {
-	sc_player_movement(gp_padl,gp_padr,gp_padu,gp_padd,gp_face1,0, dhs, dvs, touching);
+	sc_player_movement(gp_padl,gp_padr,gp_padu,gp_padd,gp_face1,playerNumber, dhs, dvs, touching);
 }
 
 //------------------------------------------------------//

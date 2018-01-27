@@ -8,12 +8,12 @@
 var deadzone = 0.6;
 
 //assign keyboard keys / gamepad controls
-keyLeft			= gamepad_button_check(0,argument0) || keyboard_check(vk_left);
-keyRight		= gamepad_button_check(0,argument1) || keyboard_check(vk_right);
-keyUp			= gamepad_button_check(0,argument2) || keyboard_check(vk_up);
-keyDown			= gamepad_button_check(0,argument3) || keyboard_check(vk_down);
-keyJumpPress	= gamepad_button_check_pressed(0,argument4) || keyboard_check_pressed(ord("X"));
-keyJumpHeld		= gamepad_button_check(0,argument4)  || keyboard_check(ord("X"));
+keyLeft			= gamepad_button_check(argument5,argument0);
+keyRight		= gamepad_button_check(argument5,argument1);
+keyUp			= gamepad_button_check(argument5,argument2);
+keyDown			= gamepad_button_check(argument5,argument3);
+keyJumpPress	= gamepad_button_check_pressed(argument5,argument4);
+keyJumpHeld		= gamepad_button_check(argument5,argument4);
 
 //check for analog stick inputs
 if gamepad_axis_value(argument5, gp_axislh) < -deadzone { keyLeft = true; }
