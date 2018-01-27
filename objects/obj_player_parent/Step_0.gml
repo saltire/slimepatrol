@@ -28,14 +28,14 @@ if count > 0 {
 }
 
 if touching > 0 {
-	show_debug_message("Touching particles " + string(touching) + " Average velocity " + string(dhs) + "," + string(dvs));
+	//show_debug_message("Touching particles " + string(touching) + " Average velocity " + string(dhs) + "," + string(dvs));
 	dhs /= touching;
 	dvs /= touching;
 	
 	dhs /= slimeSpeedRatio;
 	dvs /= slimeSpeedRatio;
 	
-	show_debug_message("Moving by " + string(dhs) + "," + string(dvs));
+	//show_debug_message("Moving by " + string(dhs) + "," + string(dvs));
 }
 
 
@@ -96,7 +96,7 @@ if (aimActive and gunCooldown <= 0) {
 
 // spawn a vacuum cleaner instance
 if (gamepad_button_check(playerNumber, gp_face3) and (!vacuum or !instance_exists(vacuum))) {
-	show_debug_message("creating vacuum");
+	//show_debug_message("creating vacuum");
 	vacuum = instance_create_layer(x, y - sprite_height / 2, "ParticleLayer", obj_vacuum);
 	vacuum.facing = -image_xscale;
 }

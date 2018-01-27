@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0be2ad32-00f6-42ca-ac9d-db49cd4b00ae",
+            "Value": {
+                "id": "2ec85427-3aec-4132-bb4d-f9005d84c319",
+                "resourcePath": "objects\\obj_particlewall\\obj_particlewall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0da4bba5-b8a9-40e6-8963-3b3301041bb4",
             "Value": {
                 "id": "2a798486-d566-42e6-8fde-380378fef911",
