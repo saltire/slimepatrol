@@ -1,0 +1,1 @@
+physics_particle_draw(flags, cat, spr_group, 0);
