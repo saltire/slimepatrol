@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0125042e-e72f-4a07-a80c-9169665f88bf",
+            "Value": {
+                "id": "05df0ec8-8976-40f0-ac02-4a0ef7f67962",
+                "resourcePath": "paths\\path0\\path0.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "06353748-e248-4949-8008-de340eba72e4",
             "Value": {
                 "id": "d9c25e3b-58b6-47c9-b49f-06e6bb317273",
@@ -135,6 +143,14 @@
             }
         },
         {
+            "Key": "36f83ac3-6189-467a-add4-5a0ab8dffa6f",
+            "Value": {
+                "id": "8bc7b400-869d-4b29-950c-dd3ad91edc88",
+                "resourcePath": "objects\\obj_player_cv\\obj_player_cv.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "453bfce9-b90f-403c-b6e2-3ea5937e9c21",
             "Value": {
                 "id": "a1ababe7-dde1-4f1c-8fe7-fbfdf050fdf9",
@@ -215,6 +231,14 @@
             }
         },
         {
+            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Value": {
+                "id": "2a8ab334-8c30-48ca-8df1-aac056ddc566",
+                "resourcePath": "options\\ios\\options_ios.yy",
+                "resourceType": "GMiOSOptions"
+            }
+        },
+        {
             "Key": "893feb3c-9584-48a0-a0ed-9bf68f2b7b8a",
             "Value": {
                 "id": "a6c0cbc4-c2b5-48c8-bac9-e26e9bad8079",
@@ -239,10 +263,34 @@
             }
         },
         {
+            "Key": "a6e1f3d2-a27e-462b-b051-86d39b711bdd",
+            "Value": {
+                "id": "4acedb9f-8943-408c-8ea0-e459083bc176",
+                "resourcePath": "sprites\\sp_cv_stand\\sp_cv_stand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a8d86d9c-d751-4087-8b48-baff5ec7297a",
             "Value": {
                 "id": "797d1355-6310-4f69-96d8-f2062f767470",
                 "resourcePath": "objects\\obj_player\\obj_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "9157fe04-e3ae-4b99-8850-fc966ffe0aab",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a9a53fcc-f3c1-4032-b173-9f8471ccf00e",
+            "Value": {
+                "id": "efb21a85-1fae-41cd-8638-2c461dec4ec8",
+                "resourcePath": "objects\\obj_impasse\\obj_impasse.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -287,6 +335,14 @@
             }
         },
         {
+            "Key": "d8a1c905-1214-4af0-aa40-fcb62bc24c03",
+            "Value": {
+                "id": "9701ec2f-5567-4923-8b51-c70cc6116448",
+                "resourcePath": "scripts\\sc_player_movement\\sc_player_movement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "daa1e7b8-9503-4acb-b56b-e8783441fa20",
             "Value": {
                 "id": "aeaddb2c-80b3-48d8-bfb2-e36268215e6c",
@@ -316,6 +372,14 @@
                 "id": "db72e0b8-75ba-4d23-8a39-f643d03d1c2e",
                 "resourcePath": "views\\dec26b91-64f2-4740-b9e1-f3c2e58c92d5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
+            "Value": {
+                "id": "bc3bf560-7aff-44c4-959b-6c36440d1e67",
+                "resourcePath": "options\\android\\options_android.yy",
+                "resourceType": "GMAndroidOptions"
             }
         },
         {
@@ -359,6 +423,14 @@
             }
         },
         {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "e9656264-3d5c-4079-bd28-64e1ec7e42c0",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
+            }
+        },
+        {
             "Key": "f4264971-c2dc-4390-abc1-1f5cfe8dbd26",
             "Value": {
                 "id": "19f34c3c-c1e2-4024-9d8e-2a7100270ae2",
@@ -368,7 +440,7 @@
         }
     ],
     "script_order": [
-        
+        "d8a1c905-1214-4af0-aa40-fcb62bc24c03"
     ],
     "tutorial": ""
 }
