@@ -89,17 +89,24 @@ if (onGround) {
 if (tempDeadTime > 0) {
 	tempDeadTime--;
 }
-if place_meeting(x, y, obj_bullet) {
-	show_debug_message("HIT");
+
+// Check if touched by a bullet, and remove all bullets touching.
+shot = false;
+while true {
+	bullet = instance_place(x, y, obj_bullet);
+	if bullet == noone break;
+	shot = true;
+	instance_destroy(bullet);
 }
-if tempDeadTime <= 0 and place_meeting(x, y, obj_bullet) {
+
+if tempDeadTime <= 0 and shot {
 	tempDeadTime = 20;
 	
 	for (b = 0; b < blobCount; b++) {
 		with instance_create_layer(x, y - sprite_height, layer, obj_slimeblob) {
 			direction = other.b * 360 / other.blobCount;
 			speed = other.blobSpeed;
-			colour = other.blobColour;
+			image_blend = other.blobColour;
 		}
 	}
 }
