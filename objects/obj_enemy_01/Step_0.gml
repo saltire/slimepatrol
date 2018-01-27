@@ -84,3 +84,22 @@ y += vspd;
 if (onGround) {
     y = floor(y);
 }
+
+
+if (tempDeadTime > 0) {
+	tempDeadTime--;
+}
+if place_meeting(x, y, obj_bullet) {
+	show_debug_message("HIT");
+}
+if tempDeadTime <= 0 and place_meeting(x, y, obj_bullet) {
+	tempDeadTime = 20;
+	
+	for (b = 0; b < blobCount; b++) {
+		with instance_create_layer(x, y - sprite_height, layer, obj_slimeblob) {
+			direction = other.b * 360 / other.blobCount;
+			speed = other.blobSpeed;
+			colour = other.blobColour;
+		}
+	}
+}

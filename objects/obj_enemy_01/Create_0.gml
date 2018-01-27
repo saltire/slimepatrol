@@ -26,7 +26,9 @@ facing = 1;				//1 right, -1 left
 
 dead = false;
 
-touchingSlime = false; // are we touching slime?
-slimeSpeedRatio = 100;
 
-vacuum = 0; // id of vacuum cleaner instance
+tempDeadTime = 0; // alien temporarily "dead", for testing purposes
+
+blobCount = 8;
+blobSpeed = 8;
+blobColour = choose(c_red, c_green, c_purple, c_lime, c_yellow);

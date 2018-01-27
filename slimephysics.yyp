@@ -71,11 +71,27 @@
             }
         },
         {
+            "Key": "1970a7bb-44fb-49b6-bc57-b84f2268bfe8",
+            "Value": {
+                "id": "7ee329a2-6a07-40cf-9912-1ecb337356de",
+                "resourcePath": "objects\\obj_slimeblob\\obj_slimeblob.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1e5c0ff7-7c11-4559-8554-2bc053294f77",
             "Value": {
                 "id": "515f2bc5-0c55-4bdb-a2ba-5c5b6b64faa6",
                 "resourcePath": "objects\\obj_dynamic_parent\\obj_dynamic_parent.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "2301bac5-66c0-4614-8554-c770c6486b3e",
+            "Value": {
+                "id": "1b98be2d-59af-45ad-9bca-892c2aa0f4df",
+                "resourcePath": "sprites\\spr_slimeblob\\spr_slimeblob.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -207,14 +223,6 @@
             }
         },
         {
-            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
-            "Value": {
-                "id": "3bdc359d-3001-44ed-ad0a-ad14bb1d506a",
-                "resourcePath": "options\\ios\\options_ios.yy",
-                "resourceType": "GMiOSOptions"
-            }
-        },
-        {
             "Key": "8805c75c-8c14-4b45-bf71-4fdc5532ca26",
             "Value": {
                 "id": "6df88ada-d0b3-4c56-8639-71c5520c8b4a",
@@ -271,14 +279,6 @@
             }
         },
         {
-            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
-            "Value": {
-                "id": "b2d2051d-d23d-45a5-9daf-3eaa1dacb470",
-                "resourcePath": "options\\linux\\options_linux.yy",
-                "resourceType": "GMLinuxOptions"
-            }
-        },
-        {
             "Key": "a9a53fcc-f3c1-4032-b173-9f8471ccf00e",
             "Value": {
                 "id": "efb21a85-1fae-41cd-8638-2c461dec4ec8",
@@ -330,7 +330,7 @@
             "Key": "daa1e7b8-9503-4acb-b56b-e8783441fa20",
             "Value": {
                 "id": "aeaddb2c-80b3-48d8-bfb2-e36268215e6c",
-                "resourcePath": "sprites\\spr_group\\spr_group.yy",
+                "resourcePath": "sprites\\spr_particle\\spr_particle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -359,18 +359,10 @@
             }
         },
         {
-            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
-            "Value": {
-                "id": "eb660a80-18b4-4584-a885-b9a3b6e7fc84",
-                "resourcePath": "options\\android\\options_android.yy",
-                "resourceType": "GMAndroidOptions"
-            }
-        },
-        {
             "Key": "eb3be0eb-8cf3-44f1-ab1d-f2a9c0ef6f77",
             "Value": {
                 "id": "915d75c7-0aa0-4317-94b1-2e15e6d15177",
-                "resourcePath": "objects\\obj_group\\obj_group.yy",
+                "resourcePath": "objects\\obj_particles\\obj_particles.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -396,14 +388,6 @@
                 "id": "3588659e-93b0-40a3-9cda-d8ed7562f94f",
                 "resourcePath": "views\\f26c0163-9d0d-4ff7-adc9-edb7a33c0d95.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
-            "Value": {
-                "id": "b8386539-1c60-42c0-9dbd-4b20c02041e0",
-                "resourcePath": "options\\mac\\options_mac.yy",
-                "resourceType": "GMMacOptions"
             }
         },
         {
