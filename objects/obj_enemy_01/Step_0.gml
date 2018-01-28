@@ -40,15 +40,15 @@ if (!onGround) vspd += grav;
 
 // check for player on a higher platform
 
-var playerAbove = (instance_exists(obj_player_01) && obj_player_01.y < y-sprite_height)
-|| (instance_exists(obj_player_02) && obj_player_02.y < y-sprite_height);
+var playerAbove = (instance_exists(obj_player_01) && obj_player_01.y < y - sprite_height / 2)
+|| (instance_exists(obj_player_02) && obj_player_02.y < y - sprite_height / 2);
 
 if (playerAbove) {
-	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height, obj_impasse);
+	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height + 10, obj_impasse);
 	var ceilingMeeting = place_meeting(x, y - sprite_height, obj_impasse);
 	var wallMeeting = place_meeting(x + (hspd*20), y-(sprite_height*2), obj_impasse);
 	var outsideBounds = x+(hspd*20)<0 || x+(hspd*20)>room_width || y-sprite_height<0;
-	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting /*!outsideBounds*/;
+	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting /*&& !outsideBounds*/;
 
 	if (onGround && jumpViable) {
 		if (!place_meeting(x,y-jumpSpeed,obj_impasse)) {
