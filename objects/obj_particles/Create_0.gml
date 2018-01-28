@@ -8,3 +8,5 @@ flags = phy_particle_flag_viscous | phy_particle_flag_spring | phy_particle_flag
 strength = .25;
 size = 16;
 spd = 300;
+
+deleteSize = 50;
