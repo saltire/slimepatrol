@@ -2,6 +2,8 @@
 
 enemyMax = 2;
 
+display_set_gui_size(room_width, room_height);
+
 // weapon type enumerator
 
 enum weapon {
