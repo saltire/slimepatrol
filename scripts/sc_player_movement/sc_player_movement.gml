@@ -27,18 +27,20 @@ if gamepad_axis_value(argument5, gp_axislv) < -deadzone { keyUp = true; }
 if gamepad_axis_value(argument5, gp_axislv) > deadzone { keyDown = true; }
 
 // flip character sprite
-if (aimActive) {
-	aimDirection = point_direction(0, 0, gph, gpv);
-	image_xscale = sign(lengthdir_x(1, aimDirection));
-}
-else {
-	if (keyLeft) {
-		image_xscale = -1;
+if (!dead) {
+	if (aimActive) {
+		aimDirection = point_direction(0, 0, gph, gpv);
+		image_xscale = sign(lengthdir_x(1, aimDirection));
 	}
-	else if (keyRight) {
-		image_xscale = 1;
+	else {
+		if (keyLeft) {
+			image_xscale = -1;
+		}
+		else if (keyRight) {
+			image_xscale = 1;
+		}
+		aimDirection = image_xscale > 0 ? 0 : 180;
 	}
-	aimDirection = image_xscale > 0 ? 0 : 180;
 }
 
 #endregion
@@ -47,6 +49,7 @@ else {
 //------------------------------------------------------//
 #region
 //when attempting to move left and not on a ladder
+if (!dead) {
 if (keyLeft) {
     if (hspd > 0) { //walking to the right
         hspd = 0; //turn on a dime
@@ -74,7 +77,7 @@ if ((keyLeft && keyRight) || (!keyLeft && !keyRight)) {
         hspd += dec;
     }
 }
-
+}
 hslow = min(abs(hspd), argument8) * sign(hspd);
 hspdTotal = hspd + argument6 - hslow;
 #endregion
@@ -84,7 +87,7 @@ hspdTotal = hspd + argument6 - hslow;
 #region
 if (!onGround) vspd += grav;
 
-if (keyJumpPress && canJump) {
+if (keyJumpPress && canJump && !dead) {
 	if (onGround || onGroundPrev) {
 	    if (!place_meeting(x,y-jumpSpeed,obj_impasse)) {
 	        vspd = -jumpSpeed;

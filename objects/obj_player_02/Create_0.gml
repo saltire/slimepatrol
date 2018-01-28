@@ -9,6 +9,7 @@ walkSpriteShotgun = sp_player_02_walk_shotgun;
 walkSpriteGrenade = sp_player_02_walk_grenade;
 walkSpriteVacuum = sp_player_02_walk_vacuum;
 walkSpriteFlash = sp_player_02_walk_flash;
+deadSprite = sp_player_02_dead;
 
 image_xscale = -1;
 

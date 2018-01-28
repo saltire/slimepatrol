@@ -33,7 +33,7 @@ if (instance_number(obj_enemy_01) < enemyMax and portalsRemaining) {
 
 // restart game if both players are dead
 
-if (!instance_exists(obj_player_parent)) {
+if (obj_player_01.dead && obj_player_02.dead) {
 	room_restart();
 }
 

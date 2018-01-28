@@ -72,10 +72,15 @@ if (onGround) {
 	//}
 }
 
+if (dead) {
+	sprite_index = deadSprite;
+	image_speed = 0;
+}
+
 #endregion
 
 // -- WEAPONS -- //
-
+ if (!dead) {
 // pick up and drop weapons
 if (gamepad_button_check_pressed(playerNumber, gp_face2)) {
 	if place_meeting(x, y, obj_weapon_drop) {
@@ -161,10 +166,11 @@ if (currentWeaponType == weapon.flash and firing and (flash == noone || !instanc
 	flash = instance_create_layer(xorigin, yorigin, layer, obj_flash);
 	energy -= 33;
 }
-
+ }
 // -- DEATH WHEN COLLIDING WITH ENEMY -- //
 
-if (place_meeting(x, y, obj_enemy_01)) {
+if (place_meeting(x, y, obj_enemy_01) && !dead) {
 	play_sfx(snd_death_scream);
-	instance_destroy();
+	dead = true;
+	//instance_destroy();
 }
