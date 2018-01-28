@@ -46,12 +46,12 @@ dead = false;
 
 
 touchingSlime = false; // are we touching slime?
-slimeSpeedRatio = 100; // ratio of physics-based slime speed to pixel speed
+slimeSpeedRatio = 50; // amount that each slime particle moves the player (lower is more)
 slimeSlowAmount = 0.5; // amount that each slime particle slows down the player
 
 gunCooldown = 0;
 gunCooldownRate = 25;
-bulletCount = 8;
+bulletCount = 5;
 spreadAngle = 4;
 bulletSpeed = 11;
 

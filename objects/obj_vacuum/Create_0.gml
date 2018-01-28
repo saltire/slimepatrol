@@ -3,9 +3,9 @@ cat = 3;
 frames = 2;
 group = noone;
 
-groupDistance = 30;
+groupDistance = 35;
 groupRadius = 20;
 spd = 200;
 
 deleteDistance = 10;
-deleteRadius = 10;
+deleteRadius = 15;
