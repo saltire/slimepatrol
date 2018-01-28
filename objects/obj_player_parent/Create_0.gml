@@ -36,10 +36,10 @@ currentWeaponType = weapon.vacuum;
 //xoffset = 0;
 
 //sprite list
-//idleSprite = sp_cv_stand;
+idleSprite = noone;
 //jumpSprite = sp_cv_jump;
 //jumpAttackSprite = sp_cv_jump_attack;
-//walkSprite = sp_cv_run;
+walkSprite = noone;
 //groundAttackSprite = sp_cv_stand_attack;
 //climbSprite = sp_cv_climb;
 
