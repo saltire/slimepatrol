@@ -78,6 +78,7 @@ if (gamepad_button_check_pressed(playerNumber, gp_face2)) {
 	if place_meeting(x, y, obj_weapon_drop) {
 		var wd = instance_place(x, y, obj_weapon_drop);
 		currentWeaponType = wd.weaponType;
+		energy = 100;
 		instance_destroy(wd);
 		// change sprite to match weapon type
 	//}else{
@@ -99,8 +100,9 @@ if (gunCooldown > 0) {
 	gunCooldown--;
 }
 
-if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0) {
+if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0 and energy >= 20) {
 	gunCooldown += gunCooldownRate;
+	energy -= 20;
 	
 	for (b = 0; b < bulletCount; b++) {
 		with instance_create_layer(xorigin, yorigin, layer, obj_bullet) {
@@ -116,8 +118,9 @@ if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0) {
 if (grenadeCooldown > 0) {
 	grenadeCooldown--;
 }
-if (currentWeaponType == weapon.grenade and firing and grenadeCooldown <= 0) {
+if (currentWeaponType == weapon.grenade and firing and grenadeCooldown <= 0 and energy >= 25) {
 	grenadeCooldown += grenadeCooldownRate;
+	energy -= 25;
 	
 	grenadeDirection = aimActive ? aimDirection : 
 		(image_xscale > 0 ? grenadeDefaultAngle : 180 - grenadeDefaultAngle);
@@ -131,14 +134,16 @@ if (currentWeaponType == weapon.grenade and firing and grenadeCooldown <= 0) {
 }
 
 // spawn a vacuum cleaner instance
-if (currentWeaponType == weapon.vacuum and firing and (vacuum == noone || !instance_exists(vacuum))) {
+if (currentWeaponType == weapon.vacuum and firing and (vacuum == noone || !instance_exists(vacuum)) and energy >= 1) {
 	vacuum = instance_create_layer(xorigin, yorigin, layer, obj_vacuum);
 	vacuum.direction = aimDirection;
+	energy -= 1;
 }
 
 // spawn a flash cleaner
-if (currentWeaponType == weapon.flash and firing and (flash == noone || !instance_exists(flash))) {
+if (currentWeaponType == weapon.flash and firing and (flash == noone || !instance_exists(flash)) and energy >= 33) {
 	flash = instance_create_layer(xorigin, yorigin, layer, obj_flash);
+	energy -= 33;
 }
 
 // -- DEATH WHEN COLLIDING WITH ENEMY -- //
