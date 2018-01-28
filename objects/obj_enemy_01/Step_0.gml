@@ -158,6 +158,7 @@ while true {
 
 if (shot) {
 	instance_destroy(); // replace this line with some sort of death state
+	play_sfx(snd_splat);
 	
 	// create blobs
 	for (b = 0; b < blobCount; b++) {

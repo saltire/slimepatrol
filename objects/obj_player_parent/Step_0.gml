@@ -84,6 +84,7 @@ if (dead) {
 // pick up and drop weapons
 if (gamepad_button_check_pressed(playerNumber, gp_face2)) {
 	if place_meeting(x, y, obj_weapon_drop) {
+		play_sfx(snd_pickup);
 		var wd = instance_place(x, y, obj_weapon_drop);
 		currentWeaponType = wd.weaponType;
 		energy = 100;

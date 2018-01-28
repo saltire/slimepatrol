@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "1f512bb1-2201-4887-9074-cd2a84e6f8bd",
+            "Value": {
+                "id": "8d229b75-3d8e-4e3f-938c-93780452ee2e",
+                "resourcePath": "sounds\\snd_explode\\snd_explode.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "21dcbac8-624c-4d95-abec-c381cdf0f8ba",
             "Value": {
                 "id": "990c3ab3-a83e-493b-863c-59e3a92c8557",
@@ -188,6 +196,14 @@
                 "id": "a07c1254-274e-4059-aa16-634992750cd2",
                 "resourcePath": "views\\23d987f7-2a37-4445-9de9-5eeaf90fd4af.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "24cb1790-fa44-4af1-9b99-a988e277381f",
+            "Value": {
+                "id": "343c1158-7d4e-452d-bb05-cb7da5964cfc",
+                "resourcePath": "sounds\\snd_spawn_bad\\snd_spawn_bad.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -323,6 +339,14 @@
             "Value": {
                 "id": "502b46fa-ad90-40a9-b512-c4b226c7eede",
                 "resourcePath": "sounds\\snd_shotgun_blast\\snd_shotgun_blast.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "58a1ceba-ba91-4b31-8346-cab29fb9a4e9",
+            "Value": {
+                "id": "67a0f614-bc4e-428a-b232-cacc466fadfb",
+                "resourcePath": "sounds\\snd_player_death_01\\snd_player_death_01.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -487,6 +511,14 @@
             }
         },
         {
+            "Key": "83f6f72d-1e6f-4b23-b3a8-8bd8f9e3bea4",
+            "Value": {
+                "id": "a34f1685-ab42-4ad8-8aab-3d494485aa31",
+                "resourcePath": "sounds\\snd_player_death_02\\snd_player_death_02.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
             "Value": {
                 "id": "ab5732a1-0fab-45ed-ab7d-a04759fc4a3a",
@@ -575,6 +607,14 @@
             }
         },
         {
+            "Key": "93beaaf0-bbf6-4219-aaf2-4e8f63365133",
+            "Value": {
+                "id": "0f1fbc96-9d2b-4b9e-b7b5-240e661bf3ad",
+                "resourcePath": "sounds\\snd_splat\\snd_splat.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "93dc627b-d449-499b-897d-6c80590f9c1b",
             "Value": {
                 "id": "670c5331-4197-4f57-87d1-4e5f14ebffc0",
@@ -639,11 +679,27 @@
             }
         },
         {
+            "Key": "b315c6eb-0326-46be-833f-c16dba8cc2b0",
+            "Value": {
+                "id": "dd643b5b-3d93-4edd-be3a-e6984e54c070",
+                "resourcePath": "sounds\\snd_spawn\\snd_spawn.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b4f90642-5341-46f1-8995-d83c9d0f17cd",
             "Value": {
                 "id": "6349da86-c501-4344-9a17-5e91f5593621",
                 "resourcePath": "scripts\\play_sfx\\play_sfx.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b54990e7-5089-4a74-b680-6577e26efd4a",
+            "Value": {
+                "id": "7d1bc1d1-e598-4dd1-b692-8b68e35397fb",
+                "resourcePath": "sounds\\snd_sparkle\\snd_sparkle.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -796,6 +852,14 @@
                 "id": "5a6601f5-f71b-44ec-81f2-82adeaf1f276",
                 "resourcePath": "rooms\\room_original\\room_original.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "e2dda542-b384-4794-92b2-7a40694fc190",
+            "Value": {
+                "id": "1dde94db-cc34-403c-8c3e-1d3aaec7928a",
+                "resourcePath": "sounds\\snd_pickup\\snd_pickup.yy",
+                "resourceType": "GMSound"
             }
         },
         {

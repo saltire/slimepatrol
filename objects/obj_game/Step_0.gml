@@ -20,6 +20,7 @@ if (instance_number(obj_enemy_01) < enemyMax and portalsRemaining) {
 	else {
 		with instance_find(obj_enemy_spawn, irandom(instance_number(obj_enemy_spawn))) {
 			instance_create_layer(x, y, layer, obj_enemy_portal);
+			play_sfx(snd_spawn);
 		}
 		portalsRemaining--;
 		//show_debug_message(portalsRemaining);

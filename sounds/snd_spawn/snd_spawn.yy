@@ -1,14 +1,14 @@
 {
-    "id": "093599ff-1efe-41e3-a51d-2a896a3f6590",
+    "id": "b315c6eb-0326-46be-833f-c16dba8cc2b0",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "snd_gamejam_loop",
+    "name": "snd_spawn",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
-    "kind": 2,
+    "kind": 0,
     "preload": false,
     "sampleRate": 44100,
     "type": 0,
-    "volume": 0.3
+    "volume": 1
 }
