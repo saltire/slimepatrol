@@ -115,7 +115,12 @@ if (gamepad_button_check(playerNumber, gp_shoulderr) and grenadeCooldown <= 0) {
 }
 
 // spawn a vacuum cleaner instance
-if (gamepad_button_check(playerNumber, gp_shoulderlb) and (!vacuum or !instance_exists(vacuum))) {
-	vacuum = instance_create_layer(xorigin, yorigin, "ParticleLayer", obj_vacuum);
+if (gamepad_button_check(playerNumber, gp_shoulderlb) and (vacuum == noone || !instance_exists(vacuum))) {
+	vacuum = instance_create_layer(xorigin, yorigin, layer, obj_vacuum);
 	vacuum.direction = aimDirection;
+}
+
+// spawn a flash cleaner
+if (gamepad_button_check(playerNumber, gp_shoulderl) and (flash == noone || !instance_exists(flash))) {
+	flash = instance_create_layer(xorigin, yorigin, layer, obj_flash);
 }

@@ -35,5 +35,5 @@ flags = phy_particle_flag_viscous | phy_particle_flag_tensile | phy_particle_fla
 strength = .25;
 explodeSpeed = 300;
 explodeGroupRadius = 15;
-explodeBlobCount = random_range(2, 3);
+explodeBlobCount = random_range(2, 4);
 explodeSpreadAngle = 20;

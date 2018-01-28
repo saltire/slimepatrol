@@ -1,0 +1,1 @@
+fadeRate = .2;

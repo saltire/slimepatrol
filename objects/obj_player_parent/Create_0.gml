@@ -60,4 +60,5 @@ grenadeCooldownRate = 50;
 grenadeSpeed = 10;
 grenadeDefaultAngle = 25;
 
-vacuum = 0; // id of vacuum cleaner instance
+vacuum = noone; // id of vacuum cleaner instance
+flash = noone; // id of flash cleaner instance
