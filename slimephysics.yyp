@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Value": {
+                "id": "fa921a00-f23a-4899-929c-10856fd36fe6",
+                "resourcePath": "options\\ios\\options_ios.yy",
+                "resourceType": "GMiOSOptions"
+            }
+        },
+        {
             "Key": "8805c75c-8c14-4b45-bf71-4fdc5532ca26",
             "Value": {
                 "id": "6df88ada-d0b3-4c56-8639-71c5520c8b4a",
@@ -444,6 +452,14 @@
                 "id": "4acedb9f-8943-408c-8ea0-e459083bc176",
                 "resourcePath": "sprites\\sp_player_01\\sp_player_01.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "54dd34b9-1fd1-453a-8d70-84ee8b94f9be",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -567,6 +583,14 @@
             }
         },
         {
+            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
+            "Value": {
+                "id": "7479b94e-8fff-4299-99c4-5d88cc95b0c3",
+                "resourcePath": "options\\android\\options_android.yy",
+                "resourceType": "GMAndroidOptions"
+            }
+        },
+        {
             "Key": "e608d6f3-7560-4cb3-ae04-88dd5543f816",
             "Value": {
                 "id": "02f80a9e-ddab-4faa-a821-343d4c6dfc2e",
@@ -612,6 +636,14 @@
                 "id": "3588659e-93b0-40a3-9cda-d8ed7562f94f",
                 "resourcePath": "views\\f26c0163-9d0d-4ff7-adc9-edb7a33c0d95.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "001bef99-86be-4a50-9498-0af5331d9c27",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         },
         {

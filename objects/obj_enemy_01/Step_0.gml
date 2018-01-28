@@ -37,13 +37,18 @@ image_xscale = facing;
 if (!onGround) vspd += grav;
 
 // jumping
-if ((instance_exists(obj_player_01) && obj_player_01.y < y-sprite_height)
-|| instance_exists(obj_player_02) && obj_player_02.y < y-sprite_height) {
 
+// check for player on a higher platform
+
+var playerAbove = (instance_exists(obj_player_01) && obj_player_01.y < y-sprite_height)
+|| (instance_exists(obj_player_02) && obj_player_02.y < y-sprite_height);
+
+if (playerAbove) {
 	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height, obj_impasse);
 	var ceilingMeeting = place_meeting(x, y - sprite_height, obj_impasse);
-	var wallMeeting = place_meeting(x + (hspd*20), y, obj_impasse);
-	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting;
+	var wallMeeting = place_meeting(x + (hspd*20), y-(sprite_height*2), obj_impasse);
+	var outsideBounds = x+(hspd*20)<0 || x+(hspd*20)>room_width || y-sprite_height<0;
+	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting /*!outsideBounds*/;
 
 	if (onGround && jumpViable) {
 		if (!place_meeting(x,y-jumpSpeed,obj_impasse)) {
@@ -58,8 +63,7 @@ if ((instance_exists(obj_player_01) && obj_player_01.y < y-sprite_height)
 				}
 			}
 		}
-	}
-	
+	}	
 }
 
 //maximum falling speed
