@@ -11,4 +11,4 @@ if place_meeting(x, y, obj_impasse) {
 }
 
 // gravity
-yv += .5;
+yv += .4;

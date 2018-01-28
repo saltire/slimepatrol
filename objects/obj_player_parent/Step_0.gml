@@ -83,7 +83,6 @@ yorigin = y - sprite_height / 2;
 if (gunCooldown > 0) {
 	gunCooldown--;
 }
-
 if (gamepad_button_check(playerNumber, gp_shoulderrb) and gunCooldown <= 0) {
 	gunCooldown += gunCooldownRate;
 	
@@ -91,7 +90,27 @@ if (gamepad_button_check(playerNumber, gp_shoulderrb) and gunCooldown <= 0) {
 		with instance_create_layer(xorigin, yorigin, layer, obj_bullet) {
 			direction = other.aimDirection + (other.b - (other.bulletCount - 1) / 2) * other.spreadAngle;
 			speed = other.bulletSpeed;
+			xv = lengthdir_x(speed, direction);
+			yv = lengthdir_y(speed, direction);
 		}
+	}
+}
+
+// throw a grenade
+if (grenadeCooldown > 0) {
+	grenadeCooldown--;
+}
+if (gamepad_button_check(playerNumber, gp_shoulderr) and grenadeCooldown <= 0) {
+	grenadeCooldown += grenadeCooldownRate;
+	
+	grenadeDirection = aimActive ? aimDirection : 
+		(image_xscale > 0 ? grenadeDefaultAngle : 180 - grenadeDefaultAngle);
+	
+	with instance_create_layer(xorigin, yorigin, layer, obj_grenade) {
+		direction = other.grenadeDirection;
+		speed = other.grenadeSpeed;
+		xv = lengthdir_x(speed, direction);
+		yv = lengthdir_y(speed, direction);
 	}
 }
 

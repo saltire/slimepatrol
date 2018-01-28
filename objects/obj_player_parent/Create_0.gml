@@ -50,9 +50,14 @@ slimeSpeedRatio = 100; // ratio of physics-based slime speed to pixel speed
 slimeSlowAmount = 0.5; // amount that each slime particle slows down the player
 
 gunCooldown = 0;
-gunCooldownRate = 15;
+gunCooldownRate = 25;
 bulletCount = 8;
 spreadAngle = 4;
-bulletSpeed = 10;
+bulletSpeed = 11;
+
+grenadeCooldown = 0;
+grenadeCooldownRate = 50;
+grenadeSpeed = 10;
+grenadeDefaultAngle = 25;
 
 vacuum = 0; // id of vacuum cleaner instance

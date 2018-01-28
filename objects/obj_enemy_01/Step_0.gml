@@ -110,3 +110,17 @@ if (shot) {
 		}
 	}
 }
+
+// Check if touched by an explosion
+explosion = instance_place(x, y, obj_explosion);
+if explosion != noone {
+	instance_destroy(); // replace this line with some sort of death state
+	
+	yorigin = y - sprite_height / 2;
+	
+	physics_particle_group_begin(flags, 0, x, yorigin, 0, 
+		(x - explosion.x) * explodeSpeed, (yorigin - explosion.y) * explodeSpeed, 
+		0, blobColour, 1, strength, 1);
+	physics_particle_group_circle(groupRadius);
+	physics_particle_group_end();
+}

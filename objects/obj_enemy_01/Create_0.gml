@@ -27,5 +27,11 @@ facing = 1;				//1 right, -1 left
 dead = false;
 
 blobCount = random_range(5, 9);
-blobSpeed = 12;
+blobSpeed = 10;
 blobColour = choose(c_red, c_green, c_purple, c_lime, c_yellow);
+
+// grenade explosion particles
+flags = phy_particle_flag_viscous | phy_particle_flag_tensile | phy_particle_flag_colourmixing;
+strength = .25;
+explodeSpeed = 300;
+groupRadius = 30;
