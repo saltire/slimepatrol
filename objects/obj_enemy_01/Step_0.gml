@@ -37,8 +37,8 @@ image_xscale = facing;
 if (!onGround) vspd += grav;
 
 // jumping
-if ((instance_exists(obj_player_01) && obj_player_01.y < y)
-|| instance_exists(obj_player_02) && obj_player_02.y < y) {
+if ((instance_exists(obj_player_01) && obj_player_01.y < y-sprite_height)
+|| instance_exists(obj_player_02) && obj_player_02.y < y-sprite_height) {
 
 	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height, obj_impasse);
 	var ceilingMeeting = place_meeting(x, y - sprite_height, obj_impasse);

@@ -1,0 +1,3 @@
+// init
+
+enemyMax = 2;
