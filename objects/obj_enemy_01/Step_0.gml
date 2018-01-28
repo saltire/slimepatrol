@@ -86,10 +86,6 @@ if (onGround) {
 }
 
 
-if (tempDeadTime > 0) {
-	tempDeadTime--;
-}
-
 // Check if touched by a bullet, and remove all bullets touching.
 shot = false;
 while true {
@@ -99,9 +95,10 @@ while true {
 	instance_destroy(bullet);
 }
 
-if tempDeadTime <= 0 and shot {
-	tempDeadTime = 20;
+if (shot) {
+	instance_destroy(); // replace this line with some sort of death state
 	
+	// create blobs
 	for (b = 0; b < blobCount; b++) {
 		with instance_create_layer(x, y - sprite_height, layer, obj_slimeblob) {
 			direction = other.b * 360 / other.blobCount;
