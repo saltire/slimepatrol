@@ -100,3 +100,9 @@ if (gamepad_button_check(playerNumber, gp_shoulderlb) and (!vacuum or !instance_
 	vacuum = instance_create_layer(xorigin, yorigin, "ParticleLayer", obj_vacuum);
 	vacuum.direction = aimDirection;
 }
+
+// -- DEATH WHEN COLLIDING WITH ENEMY -- //
+
+if (place_meeting(x, y, obj_enemy_01)) {
+	instance_destroy();
+}

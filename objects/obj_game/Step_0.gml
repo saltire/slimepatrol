@@ -8,3 +8,9 @@ if (enemyCount < enemyMax) {
 		case 1: instance_create_layer(80, 80, "SpriteLayer", obj_enemy_01); break;
 	}
 }
+
+// restart game if both players are dead
+
+if (!instance_exists(obj_player_parent)) {
+	room_restart();
+}

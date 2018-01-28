@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
+            "Value": {
+                "id": "7e4882ec-a7a5-490a-a9e5-af6217fd0f93",
+                "resourcePath": "options\\ios\\options_ios.yy",
+                "resourceType": "GMiOSOptions"
+            }
+        },
+        {
             "Key": "8805c75c-8c14-4b45-bf71-4fdc5532ca26",
             "Value": {
                 "id": "6df88ada-d0b3-4c56-8639-71c5520c8b4a",
@@ -327,11 +335,27 @@
             }
         },
         {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "73416066-97a7-4f47-928d-04b900984708",
+                "resourcePath": "options\\linux\\options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
             "Key": "a9a53fcc-f3c1-4032-b173-9f8471ccf00e",
             "Value": {
                 "id": "efb21a85-1fae-41cd-8638-2c461dec4ec8",
                 "resourcePath": "objects\\obj_impasse\\obj_impasse.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c015b2c5-dba8-4235-a5f0-7d19de0f3790",
+            "Value": {
+                "id": "f1182419-24f8-4dd7-a2c3-524f09879911",
+                "resourcePath": "tilesets\\ts_platform\\ts_platform.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -415,6 +439,22 @@
             }
         },
         {
+            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
+            "Value": {
+                "id": "0fdba1ef-a205-4128-aac1-8a0d4c21e425",
+                "resourcePath": "options\\android\\options_android.yy",
+                "resourceType": "GMAndroidOptions"
+            }
+        },
+        {
+            "Key": "e608d6f3-7560-4cb3-ae04-88dd5543f816",
+            "Value": {
+                "id": "02f80a9e-ddab-4faa-a821-343d4c6dfc2e",
+                "resourcePath": "sprites\\sp_platform_tile\\sp_platform_tile.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eb3be0eb-8cf3-44f1-ab1d-f2a9c0ef6f77",
             "Value": {
                 "id": "915d75c7-0aa0-4317-94b1-2e15e6d15177",
@@ -444,6 +484,14 @@
                 "id": "3588659e-93b0-40a3-9cda-d8ed7562f94f",
                 "resourcePath": "views\\f26c0163-9d0d-4ff7-adc9-edb7a33c0d95.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
+            "Value": {
+                "id": "c9ee4eda-ee4f-4daf-a0ed-3c7828b1f3e1",
+                "resourcePath": "options\\mac\\options_mac.yy",
+                "resourceType": "GMMacOptions"
             }
         },
         {
