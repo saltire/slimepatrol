@@ -9,5 +9,3 @@ global.rooms = [
 	room_another,
 	room_diagonal
 ];
-
-room_goto(global.rooms[irandom(array_length_1d(global.rooms) - 1)]);
