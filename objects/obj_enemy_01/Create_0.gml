@@ -6,12 +6,14 @@ vspd = 0;				//current vertical speed
 moveSpeed = 2;			//pixels moved each step
 acc = 1;				//increments run speed until moveSpeed is reached
 dec = 1;				//decrements moveSpeed until stopped
-jumpSpeed = 9;			//pixels moved each jump (gravity lowers this value)
+jumpSpeed = 5;			//pixels moved each jump (gravity lowers this value)
 grav = 0.5;				//jumpSpeed decreased by this value each step
 terminalVelocity = jumpSpeed*2; //maximum falling speed
 climbSpeed = 2;			//pixels moved when climbing ladders
 onPlatformSpeed = moveSpeed;
 jumpGraceFrames = game_get_speed(gamespeed_fps)/10;	//frames you can jump after walking off ledge
+jumpProbCooldown = 0;
+jumpProbCooldownRate = 20;
 
 //states
 onGround = false;       //check if on the ground

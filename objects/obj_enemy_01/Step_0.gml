@@ -36,35 +36,92 @@ image_xscale = facing;
 // vertical movement
 if (!onGround) vspd += grav;
 
+
 // jumping
+if jumpProbCooldown > 0 {
+	jumpProbCooldown--;
+}
+else if onGround and hspd != 0 {
+	ahead = x + hspd * 20;
+	
+	// check for ledges at different heights
+	targetHeight = 0;
+	for (h = 1; h <= 4; h++) {
+		ledgeAvailable = collision_point(ahead, y - h * 20 + 10, obj_impasse, false, true) and 
+			place_free(ahead, y - h * 20 - 10);
+		clearJumpUpward = !collision_line(x, y - sprite_height / 2, x, y - sprite_height - h * 20 + 10, obj_impasse, false, true);
+		clearJumpForward = !collision_rectangle(x - sprite_width / 2 * facing, y - sprite_height - h * 20 - 10,
+			ahead + sprite_width / 2, y - h * 20 - 10, obj_impasse, false, true);
+			
+		if ledgeAvailable and clearJumpUpward and clearJumpForward {
+			targetHeight = h;
+			break;
+		}
+	}
+	
+	// we know we can jump, now we decide if we should
+	if targetHeight > 0 {
+		clearFallDownward = false;
+		for (d = 1; d <= moveSpeed; d++) {
+			stepAhead = x + d * 20 * facing;
+			clearFallDownward = clearFallDownward || !collision_line(stepAhead, y - sprite_height, stepAhead, y + 10, obj_impasse, false, true);
+		}
+		clearWalkForward = !collision_line(x, y - sprite_height / 2, ahead, y - sprite_height / 2, obj_impasse, false, true);
+		canGoForward = clearFallDownward or clearWalkForward;
+	
+		playerAbove = (instance_exists(obj_player_01) && obj_player_01.y < y - sprite_height / 2) or
+			(instance_exists(obj_player_02) && obj_player_02.y < y - sprite_height / 2);
+		playerBelow = (instance_exists(obj_player_01) && obj_player_01.y > y - sprite_height / 2) or
+			(instance_exists(obj_player_02) && obj_player_02.y > y - sprite_height / 2);
+	
+		// more likely to jump if there is a player above or if we can't go forward or down
+		jumpProb = .35;
+		if playerAbove jumpProb += .25;
+		if playerBelow jumpProb -= .25;
+		if !canGoForward jumpProb += .2;
+		
+		if random_range(0, 1) < jumpProb {
+			// perform a jump, adjusting for target height, until we hit a ceiling
+			for (var i = 1; i <= jumpSpeed + targetHeight; i++) {
+				if place_meeting(x, y - i, obj_impasse) break;
+				vspd = -i;
+			}
+		}
+		else {
+			// wait a few frames before trying again
+			jumpProbCooldown = jumpProbCooldownRate;
+		}
+	}
+}
+
 
 // check for player on a higher platform
 
-var playerAbove = (instance_exists(obj_player_01) && obj_player_01.y < y - sprite_height / 2)
-|| (instance_exists(obj_player_02) && obj_player_02.y < y - sprite_height / 2);
+//var playerAbove = (instance_exists(obj_player_01) && obj_player_01.y < y - sprite_height / 2)
+//|| (instance_exists(obj_player_02) && obj_player_02.y < y - sprite_height / 2);
 
-if (playerAbove) {
-	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height + 10, obj_impasse);
-	var ceilingMeeting = place_meeting(x, y - sprite_height, obj_impasse);
-	var wallMeeting = place_meeting(x + (hspd*20), y-(sprite_height*2), obj_impasse);
-	var outsideBounds = x+(hspd*20)<0 || x+(hspd*20)>room_width || y-sprite_height<0;
-	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting /*&& !outsideBounds*/;
+//if (playerAbove) {
+//	var ledgeAvailable = place_meeting(x + (hspd*20), y - sprite_height + 10, obj_impasse);
+//	var ceilingMeeting = place_meeting(x, y - sprite_height, obj_impasse);
+//	var wallMeeting = place_meeting(x + (hspd*20), y-(sprite_height*2), obj_impasse);
+//	var outsideBounds = x+(hspd*20)<0 || x+(hspd*20)>room_width || y-sprite_height<0;
+//	var jumpViable = ledgeAvailable && !ceilingMeeting && !wallMeeting /*&& !outsideBounds*/;
 
-	if (onGround && jumpViable) {
-		if (!place_meeting(x,y-jumpSpeed,obj_impasse)) {
-		    vspd = -jumpSpeed;
-		} else if (place_meeting(x,y-jumpSpeed,obj_impasse)) {
-			for (var i = 0; i < jumpSpeed; i++) {
-				if (!place_meeting(x,y-i,obj_impasse)) {
-					//loop again
-				}else{
-					vspd = -i;
-					break;
-				}
-			}
-		}
-	}	
-}
+//	if (onGround && jumpViable) {
+//		if (!place_meeting(x,y-jumpSpeed,obj_impasse)) {
+//		    vspd = -jumpSpeed;
+//		} else if (place_meeting(x,y-jumpSpeed,obj_impasse)) {
+//			for (var i = 0; i < jumpSpeed; i++) {
+//				if (!place_meeting(x,y-i,obj_impasse)) {
+//					//loop again
+//				}else{
+//					vspd = -i;
+//					break;
+//				}
+//			}
+//		}
+//	}	
+//}
 
 //maximum falling speed
 if (vspd > terminalVelocity) vspd = terminalVelocity;
