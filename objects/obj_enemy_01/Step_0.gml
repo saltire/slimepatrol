@@ -106,6 +106,9 @@ if tempDeadTime <= 0 and shot {
 		with instance_create_layer(x, y - sprite_height, layer, obj_slimeblob) {
 			direction = other.b * 360 / other.blobCount;
 			speed = other.blobSpeed;
+			xv = lengthdir_x(speed, direction);
+			yv = lengthdir_y(speed, direction);
+			
 			image_blend = other.blobColour;
 		}
 	}

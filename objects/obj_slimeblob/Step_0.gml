@@ -1,5 +1,4 @@
-xv = lengthdir_x(speed, direction);
-yv = lengthdir_y(speed, direction);
+// movement
 x += xv;
 y += yv;
 
@@ -10,3 +9,6 @@ if place_meeting(x, y, obj_impasse) {
 	physics_particle_group_circle(groupRadius);
 	physics_particle_group_end();
 }
+
+// gravity
+yv += .5;

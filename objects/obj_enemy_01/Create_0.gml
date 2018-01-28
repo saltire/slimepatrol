@@ -29,6 +29,6 @@ dead = false;
 
 tempDeadTime = 0; // alien temporarily "dead", for testing purposes
 
-blobCount = 8;
-blobSpeed = 8;
+blobCount = random_range(5, 9);
+blobSpeed = 12;
 blobColour = choose(c_red, c_green, c_purple, c_lime, c_yellow);

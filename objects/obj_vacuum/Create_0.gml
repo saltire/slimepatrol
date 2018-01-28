@@ -4,7 +4,7 @@ frames = 2;
 group = noone;
 
 groupDistance = 30;
-groupRadius = 15;
+groupRadius = 20;
 spd = 200;
 
 deleteDistance = 10;
