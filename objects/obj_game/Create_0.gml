@@ -13,6 +13,10 @@ enum weapon {
 	flash
 }
 
+enemySpawnMin = 50;
+enemySpawnMax = 100;
+enemySpawnTimeout = irandom_range(enemySpawnMin, enemySpawnMax);
+
 weaponSpawnCount = instance_number(obj_weapon_spawn);
 weaponSpawnMin = 250;
 weaponSpawnMax = 500;
