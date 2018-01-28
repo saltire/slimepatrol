@@ -14,3 +14,4 @@ if (enemyCount < enemyMax) {
 if (!instance_exists(obj_player_parent)) {
 	room_restart();
 }
+
