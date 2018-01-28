@@ -2,7 +2,7 @@
     "id": "445f8629-3742-42d8-9d52-79b8baea2e6e",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sp_weapon_drop",
+    "name": "spr_weapon_drop",
     "For3D": false,
     "HTile": false,
     "VTile": false,

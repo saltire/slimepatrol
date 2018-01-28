@@ -9,7 +9,7 @@
         "526d47d9-cb79-4f51-9585-53500603dda8",
         "003e445e-665a-4790-b2a3-6b09458db4ee",
         "99b4ee09-a73d-45cc-bd1d-160c4d657e7d",
-        "1ef368a0-1829-48c5-b6a3-e77e1e1ef952"
+        "15d37f22-bf62-4494-83b3-34d4895ebd28"
     ],
     "filterType": "GMSprite",
     "folderName": "Players and Enemies",

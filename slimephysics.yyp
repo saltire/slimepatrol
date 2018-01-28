@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "15d37f22-bf62-4494-83b3-34d4895ebd28",
+            "Value": {
+                "id": "fd8dbd68-d6de-4ed0-9d01-92de6b90abda",
+                "resourcePath": "sprites\\spr_enemy_portal\\spr_enemy_portal.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18d46e6a-d3d0-41c3-b28b-08c27f2e2359",
             "Value": {
                 "id": "c6812e57-997b-4bf9-8b1c-297bbb4c1252",
@@ -218,7 +226,7 @@
             "Key": "445f8629-3742-42d8-9d52-79b8baea2e6e",
             "Value": {
                 "id": "b5e6749e-9205-41c7-9c10-e621593be039",
-                "resourcePath": "sprites\\sp_weapon_drop\\sp_weapon_drop.yy",
+                "resourcePath": "sprites\\spr_weapon_drop\\spr_weapon_drop.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -348,6 +356,14 @@
                 "id": "42319f98-74f6-4f47-b279-594895725f26",
                 "resourcePath": "views\\773348db-a538-4133-aaf9-743849659bc3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "787b3561-3705-48ba-a819-de44024c5c9e",
+            "Value": {
+                "id": "3abe5b57-d8c2-4ec4-b644-5258b0e3cba3",
+                "resourcePath": "sprites\\spr_weapon_spawn\\spr_weapon_spawn.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -508,6 +524,14 @@
                 "id": "68dba94e-f6fe-4b30-bf68-bb9305a48595",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d6e01791-927f-4265-a59c-ebfabb1538bd",
+            "Value": {
+                "id": "e9e9009a-fd8d-4057-9654-8c65c7486273",
+                "resourcePath": "rooms\\room_diagonal\\room_diagonal.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
