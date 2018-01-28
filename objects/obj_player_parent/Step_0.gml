@@ -29,18 +29,16 @@ if count > 0 {
 
 if touching > 0 {
 	//show_debug_message("Touching particles " + string(touching) + " Average velocity " + string(dhs) + "," + string(dvs));
-	dhs /= touching;
-	dvs /= touching;
-	
-	dhs /= slimeSpeedRatio;
-	dvs /= slimeSpeedRatio;
+	dhs /= (touching * slimeSpeedRatio);
+	dvs /= (touching * slimeSpeedRatio);
 	
 	//show_debug_message("Moving by " + string(dhs) + "," + string(dvs));
 }
 
 
 if (canMove) {
-	sc_player_movement(gp_padl,gp_padr,gp_padu,gp_padd,gp_face1,playerNumber, dhs, dvs, touching);
+	sc_player_movement(gp_padl, gp_padr, gp_padu, gp_padd, gp_face1, playerNumber, 
+		dhs, dvs, touching * slimeSlowAmount);
 }
 
 // wrap to other side of screen when leaving bounds
