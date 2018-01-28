@@ -101,6 +101,7 @@ if (gunCooldown > 0) {
 }
 
 if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0 and energy >= 20) {
+	play_sfx(snd_shotgun_blast);
 	gunCooldown += gunCooldownRate;
 	energy -= 20;
 	
@@ -113,12 +114,17 @@ if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0 and ener
 		}
 	}
 }
+if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0 and energy <= 0) {
+	play_sfx(snd_shotgun_click);
+	gunCooldown += gunCooldownRate;
+}
 
 // throw a grenade
 if (grenadeCooldown > 0) {
 	grenadeCooldown--;
 }
 if (currentWeaponType == weapon.grenade and firing and grenadeCooldown <= 0 and energy >= 25) {
+	play_sfx(snd_grenade_throw);
 	grenadeCooldown += grenadeCooldownRate;
 	energy -= 25;
 	
@@ -139,9 +145,16 @@ if (currentWeaponType == weapon.vacuum and firing and (vacuum == noone || !insta
 	vacuum.direction = aimDirection;
 	energy -= 1;
 }
+if (currentWeaponType == weapon.vacuum and firing and energy >= 1) {
+	if (!audio_is_playing(snd_vacuum_sfx)) play_sfx(snd_vacuum_sfx);
+}
+if (currentWeaponType == weapon.vacuum and !firing and audio_is_playing(snd_vacuum_sfx)) {
+	audio_stop_sound(snd_vacuum_sfx);
+}
 
 // spawn a flash cleaner
 if (currentWeaponType == weapon.flash and firing and (flash == noone || !instance_exists(flash)) and energy >= 33) {
+	play_sfx(snd_energy_bubble);
 	flash = instance_create_layer(xorigin, yorigin, layer, obj_flash);
 	energy -= 33;
 }
@@ -149,5 +162,6 @@ if (currentWeaponType == weapon.flash and firing and (flash == noone || !instanc
 // -- DEATH WHEN COLLIDING WITH ENEMY -- //
 
 if (place_meeting(x, y, obj_enemy_01)) {
+	play_sfx(snd_death_scream);
 	instance_destroy();
 }
