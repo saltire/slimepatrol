@@ -1,6 +1,19 @@
-// create and enemy if less than two exist
+// go to next level
 
-if (instance_number(obj_enemy_01) < enemyMax) {
+if (!instance_exists(obj_enemy_01) and !enemySpawnTimeout and !portalsRemaining) {
+	while true {
+		nextRoom = global.rooms[irandom(array_length_1d(global.rooms) - 1)];
+		if nextRoom != room {
+			room_goto(nextRoom);
+			break;
+		}
+	}
+}
+
+
+// create an enemy if less than two exist
+
+if (instance_number(obj_enemy_01) < enemyMax and portalsRemaining) {
 	if enemySpawnTimeout > 0 {
 		enemySpawnTimeout--;
 	}
@@ -8,9 +21,15 @@ if (instance_number(obj_enemy_01) < enemyMax) {
 		with instance_find(obj_enemy_spawn, irandom(instance_number(obj_enemy_spawn))) {
 			instance_create_layer(x, y, layer, obj_enemy_portal);
 		}
-		enemySpawnTimeout = irandom_range(enemySpawnMin, enemySpawnMax);
+		portalsRemaining--;
+		//show_debug_message(portalsRemaining);
+		
+		if portalsRemaining {
+			enemySpawnTimeout = irandom_range(enemySpawnMin, enemySpawnMax);
+		}
 	}
 }
+
 
 // restart game if both players are dead
 

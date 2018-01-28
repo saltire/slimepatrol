@@ -1,6 +1,7 @@
 // init
 
 enemyMax = 2;
+portalsRemaining = 8;
 
 display_set_gui_size(room_width, room_height);
 
@@ -15,7 +16,7 @@ enum weapon {
 
 enemySpawnMin = 50;
 enemySpawnMax = 100;
-enemySpawnTimeout = irandom_range(enemySpawnMin, enemySpawnMax);
+enemySpawnTimeout = 0;
 
 weaponSpawnCount = instance_number(obj_weapon_spawn);
 weaponSpawnMin = 250;

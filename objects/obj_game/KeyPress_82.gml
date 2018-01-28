@@ -1,1 +1,1 @@
-room_goto(room_start);
+room_restart();
