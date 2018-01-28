@@ -124,3 +124,9 @@ if (gamepad_button_check(playerNumber, gp_shoulderlb) and (vacuum == noone || !i
 if (gamepad_button_check(playerNumber, gp_shoulderl) and (flash == noone || !instance_exists(flash))) {
 	flash = instance_create_layer(xorigin, yorigin, layer, obj_flash);
 }
+
+// -- DEATH WHEN COLLIDING WITH ENEMY -- //
+
+if (place_meeting(x, y, obj_enemy_01)) {
+	instance_destroy();
+}
