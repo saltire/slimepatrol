@@ -11,3 +11,7 @@ steps++;
 if (gamepad_button_check_pressed(0, gp_start) || gamepad_button_check_pressed(1, gp_start)) {
 	room_goto(global.rooms[irandom(array_length_1d(global.rooms) - 1)]);
 }
+
+if (gamepad_button_check_pressed(0, gp_select) || gamepad_button_check_pressed(1, gp_select)) {
+	room_goto(room_about);
+}

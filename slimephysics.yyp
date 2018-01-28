@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "27354202-b103-450c-bc5c-0afdba59f5ff",
+            "Value": {
+                "id": "64da1999-dfbf-4c9d-958e-f758a8730a3b",
+                "resourcePath": "objects\\obj_about\\obj_about.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2d049673-a08b-4f09-be00-cef85677ba18",
             "Value": {
                 "id": "c7b9c4fa-886b-4851-9126-99d36e165146",
@@ -423,6 +431,14 @@
             }
         },
         {
+            "Key": "67dc31b9-3a41-4e05-95c9-8a15c81da188",
+            "Value": {
+                "id": "225cb10a-a67d-49db-9c2e-79ca52625cd2",
+                "resourcePath": "sprites\\spr_menu\\spr_menu.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6902c0af-95b3-4070-8f83-4c9e4bc80001",
             "Value": {
                 "id": "972b1596-dcd5-4899-bdac-53c501834776",
@@ -516,6 +532,14 @@
                 "id": "a34f1685-ab42-4ad8-8aab-3d494485aa31",
                 "resourcePath": "sounds\\snd_player_death_02\\snd_player_death_02.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "86a3a1f8-8e6f-4dde-b9e1-e62df90145b8",
+            "Value": {
+                "id": "8b7beb98-f5ea-4343-a546-353272f2c142",
+                "resourcePath": "sprites\\spr_about\\spr_about.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -740,6 +764,14 @@
                 "id": "78cb7bca-d956-496c-b268-0d814708f677",
                 "resourcePath": "views\\c94fd201-8f51-48ae-a1f9-3db090388467.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ca117c9d-dfff-4424-8c11-304c167c1107",
+            "Value": {
+                "id": "c5faa154-5a4d-4877-8a5e-2f6fbf110fd4",
+                "resourcePath": "rooms\\room_about\\room_about.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
