@@ -159,6 +159,7 @@ while true {
 if (shot) {
 	instance_destroy(); // replace this line with some sort of death state
 	play_sfx(snd_splat);
+	global.enemyKillTotal++;
 	
 	// create blobs
 	for (b = 0; b < blobCount; b++) {
@@ -177,6 +178,8 @@ if (shot) {
 explosion = instance_place(x, y, obj_explosion);
 if explosion != noone {
 	instance_destroy(); // replace this line with some sort of death state
+	play_sfx(snd_splat);
+	global.enemyKillTotal++;
 	
 	yorigin = y - sprite_height / 2;
 	explodeDirection = point_direction(explosion.x, explosion.y, x, yorigin);

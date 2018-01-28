@@ -1,4 +1,7 @@
-//
+// kills
+
+draw_set_halign(fa_center);
+draw_text(room_width/2, GRID_SIZE, string(global.enemyKillTotal));
 
 // draw left ammo bar
 

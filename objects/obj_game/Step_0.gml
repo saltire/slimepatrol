@@ -35,6 +35,8 @@ if (instance_number(obj_enemy_01) < enemyMax and portalsRemaining) {
 // restart game if both players are dead
 
 if (obj_player_01.dead && obj_player_02.dead) {
+	global.enemyKillTotal = 0;
+	global.enemyKillTotalAtRoomStart = 0;
 	room_restart();
 }
 

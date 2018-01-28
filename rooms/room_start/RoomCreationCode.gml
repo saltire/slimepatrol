@@ -9,3 +9,6 @@ global.rooms = [
 	room_another,
 	room_diagonal
 ];
+
+global.enemyKillTotal = 0;
+global.enemyKillTotalAtRoomStart = 0;
