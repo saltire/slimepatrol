@@ -1,7 +1,7 @@
 // init
 
 enemyMax = 2;
-portalsRemaining = 8;
+portalsRemaining = 12;
 
 display_set_gui_size(room_width, room_height);
 
@@ -19,11 +19,11 @@ enemySpawnMax = 100;
 enemySpawnTimeout = 0;
 
 weaponSpawnCount = instance_number(obj_weapon_spawn);
-weaponSpawnMin = 250;
-weaponSpawnMax = 500;
+weaponSpawnMin = 75;
+weaponSpawnMax = 150;
 weaponSpawnTimeout = irandom_range(weaponSpawnMin, weaponSpawnMax);
-weaponExpireMin = 250;
-weaponExpireMax = 500;
+weaponExpireMin = 200;
+weaponExpireMax = 400;
 weaponExpireTimeout = 0;
 
 coin = irandom(1);

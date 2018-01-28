@@ -519,14 +519,6 @@
             }
         },
         {
-            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
-            "Value": {
-                "id": "ab5732a1-0fab-45ed-ab7d-a04759fc4a3a",
-                "resourcePath": "options\\ios\\options_ios.yy",
-                "resourceType": "GMiOSOptions"
-            }
-        },
-        {
             "Key": "86e88bb5-fa39-457c-a797-fb49db799c20",
             "Value": {
                 "id": "26b29b0b-50be-495b-8e65-0c931d6a4971",
@@ -652,14 +644,6 @@
                 "id": "4acedb9f-8943-408c-8ea0-e459083bc176",
                 "resourcePath": "sprites\\sp_player_01\\sp_player_01.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
-            "Value": {
-                "id": "24a10393-d8b1-4ec9-849a-5113b93276c4",
-                "resourcePath": "options\\linux\\options_linux.yy",
-                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -871,14 +855,6 @@
             }
         },
         {
-            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
-            "Value": {
-                "id": "3c230fb9-5981-469e-bd3e-ac70cdb00d01",
-                "resourcePath": "options\\android\\options_android.yy",
-                "resourceType": "GMAndroidOptions"
-            }
-        },
-        {
             "Key": "e608d6f3-7560-4cb3-ae04-88dd5543f816",
             "Value": {
                 "id": "02f80a9e-ddab-4faa-a821-343d4c6dfc2e",
@@ -935,14 +911,6 @@
             }
         },
         {
-            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
-            "Value": {
-                "id": "e4c1e435-e942-4c82-8cbd-7df4f575673b",
-                "resourcePath": "options\\mac\\options_mac.yy",
-                "resourceType": "GMMacOptions"
-            }
-        },
-        {
             "Key": "f41e2159-e0d0-46d3-8f03-013470d8c47d",
             "Value": {
                 "id": "666ceae3-2b3c-4687-96bc-2fc364d55511",
@@ -972,6 +940,14 @@
                 "id": "83a58a96-bb85-4933-9a8f-e2f9ea7f589b",
                 "resourcePath": "objects\\obj_flash\\obj_flash.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f9645807-33ca-47cb-95f5-e91a7b73e35d",
+            "Value": {
+                "id": "98eece26-ab2f-4c9b-97c4-add8b4b4535b",
+                "resourcePath": "sprites\\spr_arrow\\spr_arrow.yy",
+                "resourceType": "GMSprite"
             }
         }
     ],

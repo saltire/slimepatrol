@@ -66,3 +66,6 @@ vacuum = noone; // id of vacuum cleaner instance
 flash = noone; // id of flash cleaner instance
 
 energy = 100;
+
+
+arrowDistance = 20;
