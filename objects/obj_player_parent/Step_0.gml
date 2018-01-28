@@ -47,7 +47,7 @@ if (canMove) {
 //------------------------------------------------------//
 //						ANIMATION						//
 //------------------------------------------------------//
-
+#region
 //if (!onGround) {
 //	if (vspd <= 0) {
 //		sprite_index = jumpSprite;
@@ -73,7 +73,24 @@ if (canMove) {
 //if (onLadder) {
 //	sprite_index = climbSprite;
 //}
+#endregion
 
+// -- WEAPONS -- //
+
+// pick up and drop weapons
+if (gamepad_button_check_pressed(playerNumber, gp_face2)) {
+	if place_meeting(x, y, obj_weapon_drop) {
+		var wd = instance_place(x, y, obj_weapon_drop);
+		currentWeaponType = wd.weaponType;
+		instance_destroy(wd);
+		// change sprite to match weapon type
+	}else{
+		var wd = instance_create_layer(x, y-(sprite_height/2), "spriteLayer", obj_weapon_drop);
+		wd.weaponType = currentWeaponType;
+		currentWeaponType = noone;
+		// change sprite to match weapon loss
+	}
+}
 
 // origin point for weapons
 xorigin = x + sprite_width / 2;

@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "445f8629-3742-42d8-9d52-79b8baea2e6e",
+            "Value": {
+                "id": "b5e6749e-9205-41c7-9c10-e621593be039",
+                "resourcePath": "sprites\\sp_weapon_drop\\sp_weapon_drop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "453bfce9-b90f-403c-b6e2-3ea5937e9c21",
             "Value": {
                 "id": "a1ababe7-dde1-4f1c-8fe7-fbfdf050fdf9",
@@ -359,6 +367,14 @@
             }
         },
         {
+            "Key": "c01c08ef-a58f-4625-bc0e-6f03e829e575",
+            "Value": {
+                "id": "f73da747-2daf-4ce6-b68f-eccf8c777d5b",
+                "resourcePath": "scripts\\macros\\macros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c65efb14-d6de-4bbe-bb6c-6ebf4ca2afd8",
             "Value": {
                 "id": "245e7430-2fcb-49d9-b70c-11f12368447b",
@@ -372,6 +388,14 @@
                 "id": "78cb7bca-d956-496c-b268-0d814708f677",
                 "resourcePath": "views\\c94fd201-8f51-48ae-a1f9-3db090388467.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ca739f83-bf54-4a12-b69e-170109a772dd",
+            "Value": {
+                "id": "215a6828-2406-4d0f-bd99-b05b185747bc",
+                "resourcePath": "objects\\obj_weapon_drop\\obj_weapon_drop.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -504,6 +528,7 @@
         }
     ],
     "script_order": [
+        "c01c08ef-a58f-4625-bc0e-6f03e829e575",
         "d8a1c905-1214-4af0-aa40-fcb62bc24c03",
         "7c70b281-a387-4730-b688-107bb0ca5204"
     ],
