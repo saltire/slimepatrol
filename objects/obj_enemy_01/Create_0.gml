@@ -34,4 +34,6 @@ blobColour = choose(c_red, c_green, c_purple, c_lime, c_yellow);
 flags = phy_particle_flag_viscous | phy_particle_flag_tensile | phy_particle_flag_colourmixing;
 strength = .25;
 explodeSpeed = 300;
-groupRadius = 30;
+explodeGroupRadius = 15;
+explodeBlobCount = random_range(2, 3);
+explodeSpreadAngle = 20;

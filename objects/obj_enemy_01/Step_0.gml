@@ -117,10 +117,24 @@ if explosion != noone {
 	instance_destroy(); // replace this line with some sort of death state
 	
 	yorigin = y - sprite_height / 2;
+	explodeDirection = point_direction(explosion.x, explosion.y, x, yorigin);
 	
+	// create free particles
 	physics_particle_group_begin(flags, 0, x, yorigin, 0, 
 		(x - explosion.x) * explodeSpeed, (yorigin - explosion.y) * explodeSpeed, 
 		0, blobColour, 1, strength, 1);
-	physics_particle_group_circle(groupRadius);
+	physics_particle_group_circle(explodeGroupRadius);
 	physics_particle_group_end();
+	
+	// create blobs
+	for (b = 0; b < explodeBlobCount; b++) {
+		with instance_create_layer(x, y - sprite_height, layer, obj_slimeblob) {
+			direction = other.explodeDirection + (other.b - (other.explodeBlobCount - 1) / 2) * other.explodeSpreadAngle;
+			speed = other.blobSpeed;
+			xv = lengthdir_x(speed, direction);
+			yv = lengthdir_y(speed, direction);
+			
+			image_blend = other.blobColour;
+		}
+	}
 }
