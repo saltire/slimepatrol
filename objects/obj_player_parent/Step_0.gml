@@ -80,11 +80,11 @@ if (gamepad_button_check_pressed(playerNumber, gp_face2)) {
 		currentWeaponType = wd.weaponType;
 		instance_destroy(wd);
 		// change sprite to match weapon type
-	}else{
-		var wd = instance_create_layer(x, y-(sprite_height/2), "spriteLayer", obj_weapon_drop);
-		wd.weaponType = currentWeaponType;
-		currentWeaponType = noone;
-		// change sprite to match weapon loss
+	//}else{
+	//	var wd = instance_create_layer(x, y-(sprite_height/2), "spriteLayer", obj_weapon_drop);
+	//	wd.weaponType = currentWeaponType;
+	//	currentWeaponType = noone;
+	//	// change sprite to match weapon loss
 	}
 }
 
@@ -92,11 +92,14 @@ if (gamepad_button_check_pressed(playerNumber, gp_face2)) {
 xorigin = x + sprite_width / 2;
 yorigin = y - sprite_height / 2;
 
+firing = gamepad_button_check(playerNumber, gp_shoulderrb);
+
 // fire shotgun
 if (gunCooldown > 0) {
 	gunCooldown--;
 }
-if (gamepad_button_check(playerNumber, gp_shoulderrb) and gunCooldown <= 0) {
+
+if (currentWeaponType == weapon.shotgun and firing and gunCooldown <= 0) {
 	gunCooldown += gunCooldownRate;
 	
 	for (b = 0; b < bulletCount; b++) {
@@ -113,7 +116,7 @@ if (gamepad_button_check(playerNumber, gp_shoulderrb) and gunCooldown <= 0) {
 if (grenadeCooldown > 0) {
 	grenadeCooldown--;
 }
-if (gamepad_button_check(playerNumber, gp_shoulderr) and grenadeCooldown <= 0) {
+if (currentWeaponType == weapon.grenade and firing and grenadeCooldown <= 0) {
 	grenadeCooldown += grenadeCooldownRate;
 	
 	grenadeDirection = aimActive ? aimDirection : 
@@ -128,13 +131,13 @@ if (gamepad_button_check(playerNumber, gp_shoulderr) and grenadeCooldown <= 0) {
 }
 
 // spawn a vacuum cleaner instance
-if (gamepad_button_check(playerNumber, gp_shoulderlb) and (vacuum == noone || !instance_exists(vacuum))) {
+if (currentWeaponType == weapon.vacuum and firing and (vacuum == noone || !instance_exists(vacuum))) {
 	vacuum = instance_create_layer(xorigin, yorigin, layer, obj_vacuum);
 	vacuum.direction = aimDirection;
 }
 
 // spawn a flash cleaner
-if (gamepad_button_check(playerNumber, gp_shoulderl) and (flash == noone || !instance_exists(flash))) {
+if (currentWeaponType == weapon.flash and firing and (flash == noone || !instance_exists(flash))) {
 	flash = instance_create_layer(xorigin, yorigin, layer, obj_flash);
 }
 

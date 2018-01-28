@@ -41,7 +41,11 @@
         "29ed97f1-3840-4249-8435-e4746922977d",
         "5652ea71-8cc1-47bc-ab06-04e97d682722",
         "9fc33ee2-d052-4331-a0a3-97a4d17390f0",
-        "f0b2b964-deed-4918-bf39-299de6346646"
+        "f0b2b964-deed-4918-bf39-299de6346646",
+        "fed87a4b-ae7f-4daf-823c-fa30ac7fff4c",
+        "d58a0889-ed7a-46bc-80c9-383580935ccb",
+        "33434dfa-6a2a-42bf-baae-c693fb92f918",
+        "096256d6-5909-41e2-afa0-8e4bca66f3b6"
     ],
     "IsDnD": false,
     "layers": [
@@ -192,9 +196,38 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "WeaponSpawnLayer",
+            "id": "d033896e-e5e4-4695-9ff9-83c5b6e4374d",
+            "depth": 300,
+            "grid_x": 20,
+            "grid_y": 20,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_14EFE5FF","id": "fed87a4b-ae7f-4daf-823c-fa30ac7fff4c","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_14EFE5FF","objId": "894999b5-d1ed-4249-81e9-b75d190dc556","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 310,"y": 140},
+{"name": "inst_239DEC3","id": "d58a0889-ed7a-46bc-80c9-383580935ccb","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_239DEC3","objId": "894999b5-d1ed-4249-81e9-b75d190dc556","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 310,"y": 300},
+{"name": "inst_72E73184","id": "33434dfa-6a2a-42bf-baae-c693fb92f918","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_72E73184","objId": "894999b5-d1ed-4249-81e9-b75d190dc556","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 580,"y": 60},
+{"name": "inst_7246AC0F","id": "096256d6-5909-41e2-afa0-8e4bca66f3b6","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_7246AC0F","objId": "894999b5-d1ed-4249-81e9-b75d190dc556","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 40,"y": 60}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "ParticleLayer",
             "id": "65236d27-156b-42ba-8528-a6f5b2969931",
-            "depth": 300,
+            "depth": 400,
             "grid_x": 20,
             "grid_y": 20,
             "hierarchyFrozen": false,
@@ -243,7 +276,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4280944678 },
-            "depth": 400,
+            "depth": 500,
             "grid_x": 20,
             "grid_y": 20,
             "hierarchyFrozen": false,

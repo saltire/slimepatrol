@@ -28,7 +28,7 @@ facing = 1;				//1 right 0 left
 shootAnimCount = 0;		//counter for shoot frame hold
 shootAnimMax = 12;		//how many steps attack frame is held
 
-currentWeaponType = weapon.vacuum;
+currentWeaponType = noone;
 
 //moving platforms
 //onPlatformCheck = true;

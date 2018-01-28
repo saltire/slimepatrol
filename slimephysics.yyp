@@ -327,14 +327,6 @@
             }
         },
         {
-            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
-            "Value": {
-                "id": "7e4882ec-a7a5-490a-a9e5-af6217fd0f93",
-                "resourcePath": "options\\ios\\options_ios.yy",
-                "resourceType": "GMiOSOptions"
-            }
-        },
-        {
             "Key": "8805c75c-8c14-4b45-bf71-4fdc5532ca26",
             "Value": {
                 "id": "6df88ada-d0b3-4c56-8639-71c5520c8b4a",
@@ -348,6 +340,14 @@
                 "id": "a6c0cbc4-c2b5-48c8-bac9-e26e9bad8079",
                 "resourcePath": "views\\893feb3c-9584-48a0-a0ed-9bf68f2b7b8a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "894999b5-d1ed-4249-81e9-b75d190dc556",
+            "Value": {
+                "id": "937413ed-d400-41c7-893a-653d7bb62ce3",
+                "resourcePath": "objects\\obj_weapon_spawn\\obj_weapon_spawn.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -396,14 +396,6 @@
                 "id": "4acedb9f-8943-408c-8ea0-e459083bc176",
                 "resourcePath": "sprites\\sp_player_01\\sp_player_01.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
-            "Value": {
-                "id": "73416066-97a7-4f47-928d-04b900984708",
-                "resourcePath": "options\\linux\\options_linux.yy",
-                "resourceType": "GMLinuxOptions"
             }
         },
         {
@@ -519,14 +511,6 @@
             }
         },
         {
-            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
-            "Value": {
-                "id": "0fdba1ef-a205-4128-aac1-8a0d4c21e425",
-                "resourcePath": "options\\android\\options_android.yy",
-                "resourceType": "GMAndroidOptions"
-            }
-        },
-        {
             "Key": "e608d6f3-7560-4cb3-ae04-88dd5543f816",
             "Value": {
                 "id": "02f80a9e-ddab-4faa-a821-343d4c6dfc2e",
@@ -564,14 +548,6 @@
                 "id": "3588659e-93b0-40a3-9cda-d8ed7562f94f",
                 "resourcePath": "views\\f26c0163-9d0d-4ff7-adc9-edb7a33c0d95.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
-            "Value": {
-                "id": "c9ee4eda-ee4f-4daf-a0ed-3c7828b1f3e1",
-                "resourcePath": "options\\mac\\options_mac.yy",
-                "resourceType": "GMMacOptions"
             }
         },
         {

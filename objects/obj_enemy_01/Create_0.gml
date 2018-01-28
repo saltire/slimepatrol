@@ -26,7 +26,7 @@ facing = 1;				//1 right, -1 left
 
 dead = false;
 
-blobCount = random_range(5, 9);
+blobCount = irandom_range(5, 7);
 blobSpeed = 10;
 blobColour = choose(c_red, c_green, c_purple, c_lime, c_yellow);
 
@@ -35,5 +35,5 @@ flags = phy_particle_flag_viscous | phy_particle_flag_tensile | phy_particle_fla
 strength = .25;
 explodeSpeed = 300;
 explodeGroupRadius = 20;
-explodeBlobCount = random_range(2, 4);
+explodeBlobCount = irandom_range(4, 6);
 explodeSpreadAngle = 20;
