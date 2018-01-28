@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "0f5fdcc6-72fb-4efc-8ce0-a6ebf6c63a92",
+            "Value": {
+                "id": "5e9f1b7b-3280-4101-865b-241507e37436",
+                "resourcePath": "sprites\\sp_player_01_walk_flash\\sp_player_01_walk_flash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "133ce912-f75d-4514-a23e-b96f8d78d358",
             "Value": {
                 "id": "6306f13f-0939-404b-bfe9-52b115737655",
@@ -255,6 +263,22 @@
             }
         },
         {
+            "Key": "4881adab-4a2d-4462-8fce-135a91fdfd8b",
+            "Value": {
+                "id": "a3593346-ce22-46bc-b6c4-6846050dd97e",
+                "resourcePath": "sprites\\sp_player_01_walk_grenade\\sp_player_01_walk_grenade.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5071f81d-6c55-45a4-83ed-48129c4039ce",
+            "Value": {
+                "id": "8b36273f-8257-490a-a63a-c5f392046068",
+                "resourcePath": "sprites\\sp_player_02_walk_grenade\\sp_player_02_walk_grenade.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "526d47d9-cb79-4f51-9585-53500603dda8",
             "Value": {
                 "id": "ecfa731b-3864-4db2-b9b0-f691bdd1fb8c",
@@ -371,6 +395,14 @@
             "Value": {
                 "id": "23d69f35-b387-4d99-b96f-48a9dd3358fb",
                 "resourcePath": "sprites\\spr_flash\\spr_flash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "73713a10-0b6a-439d-96f3-b3a5ee706b6a",
+            "Value": {
+                "id": "b38a9c4b-89a3-495c-b396-78a5c92db38e",
+                "resourcePath": "sprites\\sp_player_02_walk_shotgun\\sp_player_02_walk_shotgun.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -495,11 +527,27 @@
             }
         },
         {
+            "Key": "901f6c3a-4b07-4347-9569-fb3badf66992",
+            "Value": {
+                "id": "4f0de077-ff47-4d1d-be36-8e4923b770bb",
+                "resourcePath": "sprites\\sp_player_01_walk_vacuum\\sp_player_01_walk_vacuum.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "91be72d1-9ecd-458f-bb51-ef25d170c424",
             "Value": {
                 "id": "93d930d7-a100-41ff-8a6d-e467218b6d27",
                 "resourcePath": "views\\91be72d1-9ecd-458f-bb51-ef25d170c424.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "93dc627b-d449-499b-897d-6c80590f9c1b",
+            "Value": {
+                "id": "670c5331-4197-4f57-87d1-4e5f14ebffc0",
+                "resourcePath": "sprites\\sp_player_02_walk_flash\\sp_player_02_walk_flash.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -583,6 +631,14 @@
             }
         },
         {
+            "Key": "c4b68c4a-0795-426d-989e-8c78ae44e36f",
+            "Value": {
+                "id": "36f701c1-f5cd-4976-a793-ffc6c556de75",
+                "resourcePath": "sprites\\sp_player_02_walk_vacuum\\sp_player_02_walk_vacuum.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c65efb14-d6de-4bbe-bb6c-6ebf4ca2afd8",
             "Value": {
                 "id": "245e7430-2fcb-49d9-b70c-11f12368447b",
@@ -620,6 +676,14 @@
                 "id": "68dba94e-f6fe-4b30-bf68-bb9305a48595",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d3613c5a-1b1e-44c1-9c1a-d7e7410b1add",
+            "Value": {
+                "id": "e3ca92fd-1ccf-4df5-900a-2fe5fc9287ca",
+                "resourcePath": "scripts\\walkAnimation\\walkAnimation.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -775,6 +839,14 @@
             }
         },
         {
+            "Key": "f444169f-0bcd-4419-a7ed-7333e8d4ff79",
+            "Value": {
+                "id": "2f04bf21-08f8-4464-b815-42f203ec05bd",
+                "resourcePath": "sprites\\sp_player_01_walk_shotgun\\sp_player_01_walk_shotgun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f7fc5b90-e19b-4e6c-9995-a2d1a56d1a2c",
             "Value": {
                 "id": "83a58a96-bb85-4933-9a8f-e2f9ea7f589b",
@@ -787,7 +859,8 @@
         "c01c08ef-a58f-4625-bc0e-6f03e829e575",
         "d8a1c905-1214-4af0-aa40-fcb62bc24c03",
         "7c70b281-a387-4730-b688-107bb0ca5204",
-        "b4f90642-5341-46f1-8995-d83c9d0f17cd"
+        "b4f90642-5341-46f1-8995-d83c9d0f17cd",
+        "d3613c5a-1b1e-44c1-9c1a-d7e7410b1add"
     ],
     "tutorial": ""
 }

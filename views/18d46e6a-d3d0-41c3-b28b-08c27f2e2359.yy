@@ -9,7 +9,15 @@
         "526d47d9-cb79-4f51-9585-53500603dda8",
         "003e445e-665a-4790-b2a3-6b09458db4ee",
         "99b4ee09-a73d-45cc-bd1d-160c4d657e7d",
-        "15d37f22-bf62-4494-83b3-34d4895ebd28"
+        "15d37f22-bf62-4494-83b3-34d4895ebd28",
+        "f444169f-0bcd-4419-a7ed-7333e8d4ff79",
+        "4881adab-4a2d-4462-8fce-135a91fdfd8b",
+        "901f6c3a-4b07-4347-9569-fb3badf66992",
+        "0f5fdcc6-72fb-4efc-8ce0-a6ebf6c63a92",
+        "73713a10-0b6a-439d-96f3-b3a5ee706b6a",
+        "5071f81d-6c55-45a4-83ed-48129c4039ce",
+        "c4b68c4a-0795-426d-989e-8c78ae44e36f",
+        "93dc627b-d449-499b-897d-6c80590f9c1b"
     ],
     "filterType": "GMSprite",
     "folderName": "Players and Enemies",

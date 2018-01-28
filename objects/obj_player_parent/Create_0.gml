@@ -37,11 +37,11 @@ currentWeaponType = noone;
 
 //sprite list
 idleSprite = noone;
-//jumpSprite = sp_cv_jump;
-//jumpAttackSprite = sp_cv_jump_attack;
 walkSprite = noone;
-//groundAttackSprite = sp_cv_stand_attack;
-//climbSprite = sp_cv_climb;
+walkSpriteShotgun = noone;
+walkSpriteGrenade = noone;
+walkSpriteVacuum = noone;
+walkSpriteFlash = noone;
 
 dead = false;
 //alpha = 0;

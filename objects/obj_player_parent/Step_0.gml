@@ -59,14 +59,17 @@ if (canMove) {
 
 if (onGround) {
 	if (keyLeft || keyRight) {
-		sprite_index = walkSprite;
+		image_speed = 1;
+		walkAnimation();		
 	}
-	if (!keyLeft && !keyRight) {
-	    sprite_index = idleSprite;
+	if ( (!keyLeft && !keyRight) || (keyLeft && keyRight) ){
+		image_speed = 0;
+		image_index = 0;
+	    walkAnimation();
 	}	
-	if (keyLeft && keyRight) {
-	    sprite_index = idleSprite;
-	}
+	//if (keyLeft && keyRight) {
+	//    sprite_index = idleSprite;
+	//}
 }
 
 #endregion
